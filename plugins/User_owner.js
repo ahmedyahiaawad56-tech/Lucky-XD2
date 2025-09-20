@@ -12,9 +12,9 @@ const { malvin } = require('../malvin');
 const config = require('../settings');
 
 malvin({
-    pattern: "user",
+    pattern: "𝐦𝐚𝐥𝐯𝐢𝐧",
     react: "✅", 
-    desc: "Get owner number",
+    desc: "201013346322",
     category: "main",
     filename: __filename
 }, 
