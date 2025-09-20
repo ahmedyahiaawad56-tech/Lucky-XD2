@@ -16,16 +16,16 @@ function convertToBool(text, trueValue = 'true') {
 module.exports = {
   // ===== BOT CORE SETTINGS =====
   SESSION_ID: settings.SESSION_ID || process.env.SESSION_ID || "",
-  PREFIX: getConfig("PREFIX") || "x" || settings.PREFIX,
+  PREFIX: getConfig("PREFIX") || "ً" || settings.PREFIX,
   CHATBOT: getConfig("CHATBOT") || "on",
-  BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "ʟᴜᴄᴋʏ-xᴅ",
+  BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
   MODE: getConfig("MODE") || process.env.MODE || "private",
   REPO: process.env.REPO || "https://github.com/Tomilucky218/Lucky-XD2",
   BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
   // ===== OWNER & DEVELOPER SETTINGS =====
   OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "201013346322",
-  OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "ʟᴜᴄᴋʏ ➋➊➑",
+  OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
   DEV: process.env.DEV || "201013346322",
   DEVELOPER_NUMBER: '201013346322@s.whatsapp.net',
   MENU_AUDIO_URL: process.env.MENU_AUDIO_URL || 'https://files.catbox.moe/3v5i11.mp3',
@@ -45,7 +45,7 @@ NEWSLETTER_JID: process.env.NEWSLETTER_JID || '120363420656466131@newsletter',
   OWNER_REACT: process.env.OWNER_REACT || "false",
   CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
   CUSTOM_REACT_EMOJIS: getConfig("CUSTOM_REACT_EMOJIS") || process.env.CUSTOM_REACT_EMOJIS || "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍",
-  STICKER_NAME: process.env.STICKER_NAME || "ᴋʜᴀɴ-ᴍᴅ",
+  STICKER_NAME: process.env.STICKER_NAME || "𝐦𝐚𝐥𝐯𝐢𝐧",
   AUTO_STICKER: process.env.AUTO_STICKER || "false",
 
   // ===== MEDIA & AUTOMATION =====
@@ -55,10 +55,10 @@ NEWSLETTER_JID: process.env.NEWSLETTER_JID || '120363420656466131@newsletter',
   MENU_IMAGE_URL: getConfig("MENU_IMAGE_URL") || "https://files.catbox.moe/4itzeu.jpg",
 
   // ===== SECURITY & ANTI-FEATURES =====
-  ANTI_DELETE: process.env.ANTI_DELETE || "true",
+  ANTI_DELETE: process.env.ANTI_DELETE || "false",
   ANTI_CALL: process.env.ANTI_CALL || "false",
   ANTI_BAD_WORD: process.env.ANTI_BAD_WORD || "false",
-  ANTI_LINK: process.env.ANTI_LINK || "true",
+  ANTI_LINK: process.env.ANTI_LINK || "false",
   ANTI_VV: process.env.ANTI_VV || "true",
   DELETE_LINKS: process.env.DELETE_LINKS || "false",
   ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "inbox",
@@ -66,7 +66,7 @@ NEWSLETTER_JID: process.env.NEWSLETTER_JID || '120363420656466131@newsletter',
   PM_BLOCKER: process.env.PM_BLOCKER || "true",
 
   // ===== BOT BEHAVIOR & APPEARANCE =====
-  DESCRIPTION: process.env.DESCRIPTION || "*© Powered By Lucky Tech Hub*",
+  DESCRIPTION: process.env.DESCRIPTION || "*© Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub*",
   PUBLIC_MODE: process.env.PUBLIC_MODE || "true",
   ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
   AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "false",
