@@ -7,7 +7,7 @@ const { writeFileSync } = require('fs');
 const path = require('path');
 
 malvin({
-  pattern: "broadcast",
+  pattern: "شير",
   category: "group",
   desc: "Bot makes a broadcast in all groups",
   filename: __filename,
@@ -15,9 +15,9 @@ malvin({
 }, async (conn, mek, m, { q, isGroup, isAdmins, reply }) => {
   try {
     if (!isGroup) return reply("❌ This command can only be used in groups!");
-    if (!isAdmins) return reply("❌ You need to be an admin to broadcast in this group!");
+    if (!isAdmins) return reply("❌ لازم ادمن عشان انفذ الامر");
 
-    if (!q) return reply("❌ Provide text to broadcast in all groups!");
+    if (!q) return reply("❌ !اكتب النص حتى يتم الشير");
 
     let allGroups = await conn.groupFetchAllParticipating();
     let groupIds = Object.keys(allGroups); // Extract group IDs
