@@ -26,7 +26,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
     } catch (e) {
         console.error("Error in AI command:", e);
         await react("❌");
-        reply("حصل خطأ ما");
+        reply("حدث خطأ ما");
     }
 });
 
@@ -55,7 +55,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
     } catch (e) {
         console.error("Error in OpenAI command:", e);
         await react("❌");
-        reply("حصل خطأ ما.");
+        reply("حدث خطأ ما.");
     }
 });
 
