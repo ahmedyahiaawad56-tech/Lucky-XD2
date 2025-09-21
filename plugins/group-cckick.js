@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "out",
+    pattern: "وزع",
     alias: ["kick2", "🦶"],
     desc: "Removes all members with specific country code from the group",
     category: "admin",
@@ -21,7 +21,7 @@ async (conn, mek, m, {
     }
 
     // Check if the bot is an admin
-    if (!isBotAdmins) return reply("❌ I need to be an admin to use this command.");
+    if (!isBotAdmins) return reply("❌ لازم ادن عشان يتشغل الامر");
 
     if (!q) return reply("❌ Please provide a country code. Example: .out 263");
 
