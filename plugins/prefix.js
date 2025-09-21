@@ -31,7 +31,7 @@ malvin({
 
   setPrefix(newPrefix); // updates without reboot
 
-  return reply(`✅ تم التغير الى*${newPrefix}* — no restart needed.`);
+  return reply(`✅ تم التغير الى*${newPrefix}* —.`);
 
 });
 
