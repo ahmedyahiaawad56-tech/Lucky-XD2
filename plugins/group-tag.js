@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 
 // Fixed & Created By Malvin x Jawad
 malvin({
-  pattern: "hidetag",
+  pattern: "الكل",
   alias: ["tag", "h"],  
   react: "🔊",
   desc: "To Tag all Members for Any Message/Media",
@@ -20,7 +20,7 @@ async (conn, mek, m, {
     };
 
     if (!isGroup) return reply("❌ This command can only be used in groups.");
-    if (!isAdmins && !isCreator) return reply("❌ Only group admins can use this command.");
+    if (!isAdmins && !isCreator) return reply("❌ ادمن فقط.");
 
     const mentionAll = { mentions: participants.map(u => u.id) };
 
