@@ -19,13 +19,13 @@ malvin({
 
     if (message.quoted.mtype !== 'stickerMessage') {
         return await client.sendMessage(from, {
-            text: "❌ فقط يمكن تحويل الملصقات"
+            text: "*❌ فقط يمكن تحويل الملصقات*"
         }, { quoted: message });
     }
 
     // Send processing message
     await client.sendMessage(from, {
-        text: "🔄 جاري تحويل الملصق الى صورة"
+        text: "*🔄 جاري تحويل الملصق الى صورة*"
     }, { quoted: message });
 
     try {
