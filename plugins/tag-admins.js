@@ -3,7 +3,7 @@ const { malvin } = require('../malvin');
 const { getGroupAdmins } = require('../lib/functions');
 
 malvin({
-    pattern: "تاق ادمن",
+    pattern: "ادمن",
     alias: ["gc_tagadmins"],
     desc: "Mention all admins of the group",
     category: "group",
