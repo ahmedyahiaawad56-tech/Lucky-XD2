@@ -140,7 +140,7 @@ malvin(
 ╰───────────────╯
 
 🔊 𝚁𝚎𝚙𝚕𝚢 𝚠𝚒𝚝𝚑 *1* 𝚘𝚛 *2*
-> ${Config.FOOTER || 'Powered By Lucky Tech Hub'}`;
+> ${Config.FOOTER || 'Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub'}`;
 
             // Send song info with thumbnail
             const sentMsg = await malvin.sendMessage(mek.chat, {
