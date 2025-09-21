@@ -3,7 +3,7 @@ const { malvin } = require('../malvin');
 const { getGroupAdmins } = require('../lib/functions');
 
 malvin({
-    pattern: "tagadmins",
+    pattern: "تاق ادمن",
     alias: ["gc_tagadmins"],
     desc: "Mention all admins of the group",
     category: "group",
@@ -35,10 +35,10 @@ async (conn, mek, m, {
             .trim() || "Attention Admins ⚠️";
 
         let teks = `📢 *Admin Tag Alert*\n`;
-        teks += `🏷️ *Group:* ${groupName}\n`;
-        teks += `👥 *Admins:* ${admins.length}\n`;
-        teks += `💬 *Message:* ${messageText}\n\n`;
-        teks += `┌──⊷ *Admin Mentions*\n`;
+        teks += `🏷️ *قروب:* ${groupName}\n`;
+        teks += `👥 *ادمن:* ${admins.length}\n`;
+        teks += `💬 *رسالة:* ${messageText}\n\n`;
+        teks += `┌──⊷ *منشن ادمن*\n`;
 
         for (let admin of admins) {
             teks += `${chosenEmoji} @${admin.split("@")[0]}\n`;
