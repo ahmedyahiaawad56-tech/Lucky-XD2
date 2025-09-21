@@ -4,7 +4,7 @@ const config = require('../settings');
 
 
 malvin({
-    pattern: "getpp",
+    pattern: "بروفايل",
     alias: ["stealpp"],
     react: "🖼️",
     desc: "Sends the profile picture of a user by phone number (owner only)",
@@ -28,7 +28,7 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
         try {
             ppUrl = await conn.profilePictureUrl(targetJid, "image");
         } catch (e) {
-            return reply("🖼️ This user has no profile picture or it cannot be accessed!");
+            return reply("🖼️  هذا الشخص لايملك بروفايل او لايمكن الوصول اليه");
         }
 
         // Get the user's name or number for the caption
@@ -43,7 +43,7 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
         // Send the profile picture
         await conn.sendMessage(from, { 
             image: { url: ppUrl }, 
-            caption: `📌 Profile picture of ${userName}` 
+            caption: `📌 صورة الملف الشخصي ${userName}` 
         });
 
         // Send a reaction to the command message
@@ -51,7 +51,7 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
 
     } catch (e) {
         // Reply with a generic error message and log the error
-        reply("🛑 An error occurred while fetching the profile picture! Please try again later.");
+        reply("🛑 حدث خطأ لم استطع جلب البروفايل");
         l(e); // Log the error for debugging
     }
 });
