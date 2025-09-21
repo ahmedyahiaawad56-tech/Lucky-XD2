@@ -26,7 +26,7 @@ async (conn, mek, m, {
 
     // If no message or reply is provided
     if (!q && !m.quoted) {
-      return reply("❌ Please provide a message or reply to a message to tag all members.");
+      return reply(" !اكتب الكلام الداير تعمل ليهو تاق .");
     }
 
     // If a reply to a message
@@ -45,7 +45,7 @@ async (conn, mek, m, {
       if (['imageMessage', 'videoMessage', 'audioMessage', 'stickerMessage', 'documentMessage'].includes(type)) {
         try {
           const buffer = await m.quoted.download?.();
-          if (!buffer) return reply("❌ Failed to download the quoted media.");
+          if (!buffer) return reply("❌فشل التنزيل.");
 
           let content;
           switch (type) {
