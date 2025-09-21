@@ -44,7 +44,7 @@ async (conn, mek, m, {
             teks += `${chosenEmoji} @${admin.split("@")[0]}\n`;
         }
 
-        teks += `└────✦ *LUCKY ┃ XD* ✦────`;
+        teks += `└────✦ *𝐦𝐚𝐥𝐯𝐢𝐧* ✦────`;
 
         await conn.sendMessage(from, {
             text: teks,
