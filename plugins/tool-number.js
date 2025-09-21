@@ -45,14 +45,14 @@ async (conn, mek, m, { from, args, reply }) => {
 
         // Final message with OTP instructions
         await reply(
-            `╭──「 📱 ارقام فيك」\n` +
+            `╭──「 📱 TEMPORARY NUMBERS 」\n` +
             `│\n` +
-            `│ الدولة: ${countryCode.toUpperCase()}\n` +
-            `│ الرقم: ${numbers.length}\n` +
+            `│ Country: ${countryCode.toUpperCase()}\n` +
+            `│ Numbers Found: ${numbers.length}\n` +
             `│\n` +
             `${numberList}\n\n` +
-            `╰──「 📦 الاستخدام: .otpbox <number> 」\n` +
-            `_مثال: .otpbox +1234567890_`
+            `╰──「 📦 USE: .otpbox <number> 」\n` +
+            `_Example: .otpbox +1234567890_`
         );
 
     } catch (err) {
