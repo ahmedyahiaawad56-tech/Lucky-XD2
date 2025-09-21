@@ -13,7 +13,7 @@ const ensureOwnerFile = () => {
 
 // Command: Add a temporary owner
 malvin({
-    pattern: "اضافة مالك",
+    pattern: "رفع",
     alias: ["addsudo", "addowner","sudo"],
     desc: "Add a temporary owner",
     category: "owner",
