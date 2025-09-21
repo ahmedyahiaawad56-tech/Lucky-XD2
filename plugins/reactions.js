@@ -20,8 +20,8 @@ malvin(
             let message = mentionedUser
                 ? `${sender} is crying over @${mentionedUser.split("@")[0]}`
                 : isGroup
-                ? `${sender} is crying!`
-                : `> © Powered By Lucky Tech Hub 🖤`;
+                ? `${sender} حزين جدا😢`
+                : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
 
             const apiUrl = "https://api.waifu.pics/sfw/cry";
             let res = await axios.get(apiUrl);
@@ -140,8 +140,8 @@ malvin(
             let message = mentionedUser
                 ? `${sender} hugged @${mentionedUser.split("@")[0]}`
                 : isGroup
-                ? `${sender} is hugging everyone!`
-                : `> © Powered By Lucky Tech Hub 🖤`;
+                ? `${sender} جيب حضن🫂`
+                : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
 
             const apiUrl = "https://api.waifu.pics/sfw/hug";
             let res = await axios.get(apiUrl);
@@ -481,7 +481,7 @@ malvin(
 
 malvin(
     {
-        pattern: "highfive",
+        pattern: "كفك",
         desc: "Send a high-five reaction GIF.",
         category: "reaction",
         react: "✋",
@@ -497,8 +497,8 @@ malvin(
             let message = mentionedUser
                 ? `${sender} gave a high-five to @${mentionedUser.split("@")[0]}`
                 : isGroup
-                ? `${sender} is high-fiving everyone!`
-                : `> © Powered By Lucky Tech Hub 🖤`;
+                ? `${sender} كفك ياعسل 👋`
+                : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
 
             const apiUrl = "https://api.waifu.pics/sfw/highfive";
             let res = await axios.get(apiUrl);
