@@ -21,7 +21,7 @@ async (conn, mek, m, {
     }
 
     // Check if the bot is an admin
-    if (!isBotAdmins) return reply("❌ لازم ادن عشان يتشغل الامر");
+    if (!isBotAdmins) return reply("*❌ لازم ادمن عشان يتشغل الامر*");
 
     if (!q) return reply("❌ Please provide a country code. Example: .out 263");
 
