@@ -87,7 +87,7 @@ malvin(
                     });
                 } catch (searchError) {
                     console.error('Search error:', searchError);
-                    return reply('❌ Search failed. Please try again later.');
+                    return reply('❌ فشل البحث. حاول مرة اخرى.');
                 }
             }
 
@@ -103,7 +103,7 @@ malvin(
                 songData = apiResponse.data;
             } catch (apiError) {
                 console.error('API error:', apiError);
-                return reply('❌ Audio download failed. The service might be unavailable.');
+                return reply('❌ فشل التحميل.هناك خطأ في السيرفر.');
             }
 
             // Get thumbnail
@@ -179,7 +179,7 @@ malvin(
                     malvin.ev.off('messages.upsert', messageListener);
                     clearTimeout(timeout);
 
-                    await reply("⏳ Downloading your audio... Please wait...");
+                    await reply("⏳ جاري تحميل المقطع يرجى الانتظار");
 
                     // Download audio
                     const audioResponse = await axiosInstance.get(songData.download_url, {
@@ -220,8 +220,8 @@ malvin(
                     }
 
                 } catch (error) {
-                    console.error('Download error:', error);
-                    await reply('❌ Download failed: ' + (error.message || 'Network error'));
+                    console.error('فشل التحميل:', error);
+                    await reply('❌ فشل الملف: ' + (error.message || 'Network error'));
                     try {
                         if (mek?.key?.id) {
                             await malvin.sendMessage(mek.chat, { react: { text: "❌", key: mek.key } });
