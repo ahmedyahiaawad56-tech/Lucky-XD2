@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "وزع",
+    pattern: "شوت",
     alias: ["kick2", "🦶"],
     desc: "Removes all members with specific country code from the group",
     category: "admin",
