@@ -34,11 +34,11 @@ async (conn, mek, m, {
             .replace(new RegExp(`^${config.PREFIX}${command}\\s*`, 'i'), '')
             .trim() || "Attention Admins ⚠️";
 
-        let teks = `📢 *منشن ادمن*\n`;
-        teks += `🏷️ *قروب:* ${groupName}\n`;
-        teks += `👥 *ادمن:* ${admins.length}\n`;
-        teks += `💬 *رسالة:* ${messageText}\n\n`;
-        teks += `┌──⊷ *ا𝐦𝐚𝐥𝐯𝐢𝐧*\n`;
+        let teks = `📢 *Admin Tag Alert*\n`;
+        teks += `🏷️ *Group:* ${groupName}\n`;
+        teks += `👥 *Admins:* ${admins.length}\n`;
+        teks += `💬 *Message:* ${messageText}\n\n`;
+        teks += `┌──⊷ *Admin Mentions*\n`;
 
         for (let admin of admins) {
             teks += `${chosenEmoji} @${admin.split("@")[0]}\n`;
