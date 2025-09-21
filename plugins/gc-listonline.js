@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "online",
+    pattern: "اونلاين",
     alias: ["whosonline", "onlinemembers"],
     desc: "Check who's online in the group (Admins & Owner only)",
     category: "main",
@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
         }
 
         // Inform user that we're checking
-        await reply("🔄 Scanning for online members... This may take 15-20 seconds.");
+        await reply("🔄 جاري البحث عن اشخاص متصلون .يستغرق الامر بعض الوقت.");
 
         const onlineMembers = new Set();
         const groupData = await conn.groupMetadata(from);
