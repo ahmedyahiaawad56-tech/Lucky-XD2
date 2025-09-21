@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "hack",
+    pattern: "هاك",
     desc: "Displays a dynamic and playful 'Hacking' message for fun.",
     category: "fun",
     filename: __filename
