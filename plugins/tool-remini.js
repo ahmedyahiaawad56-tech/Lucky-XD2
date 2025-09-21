@@ -6,7 +6,7 @@ const path = require("path");
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "دقة",
+  pattern: "جودة",
   alias: ["enhance", "hq", "qualityup"],
   react: '✨',
   desc: "Enhance photo quality using Remini AI",
