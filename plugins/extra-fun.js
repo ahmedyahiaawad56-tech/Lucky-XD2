@@ -2,7 +2,7 @@ const { malvin } = require("../malvin");
 const config = require('../settings');
 
 malvin({
-  pattern: "compatibility",
+  pattern: "ربط",
   alias: ["friend", "fcheck"],
   desc: "Calculate the compatibility score between two users.",
   category: "fun",
@@ -12,7 +12,7 @@ malvin({
 }, async (conn, mek, m, { args, reply }) => {
   try {
     if (args.length < 2) {
-      return reply("Please mention two users to calculate compatibility.\nUsage: `.compatibility @user1 @user2`");
+      return reply("Please mention two users to calculate compatibility.\n");
     }
 
     let user1 = m.mentionedJid[0]; 
@@ -51,7 +51,7 @@ malvin({
 }, async (conn, mek, m, { args, reply }) => {
   try {
     if (args.length < 1) {
-      return reply("Please mention a user to calculate their aura.\nUsage: `.aura @user`");
+      return reply("*اعمل منشن لثنائي العايز تربط ليهم*");
     }
 
     let user = m.mentionedJid[0]; 
