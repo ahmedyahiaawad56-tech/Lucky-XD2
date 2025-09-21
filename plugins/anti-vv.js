@@ -1,7 +1,7 @@
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "vv",
+  pattern: "جيب",
   alias: ["viewonce", 'retrive'],
   react: '🐳',
   desc: "Owner Only - retrieve quoted message back to user",
@@ -50,7 +50,7 @@ malvin({
         break;
       default:
         return await client.sendMessage(from, {
-          text: "❌ Only image, video, and audio messages are supported"
+          text: "❌ صور .فديوهات فقط"
         }, { quoted: message });
     }
 
