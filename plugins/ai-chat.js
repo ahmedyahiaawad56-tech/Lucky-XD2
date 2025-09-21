@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 const axios = require('axios');
 
 malvin({
-    pattern: "جي بتي",
+    pattern: "بوت",
     alias: ["bot", "dj", "gpt", "gpt4", "bing"],
     desc: "Chat with an AI model",
     category: "ai",
@@ -11,7 +11,7 @@ malvin({
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
     try {
-        if (!q) return reply("مرحبا! كيف يمكنني مساعدتك اليوم ");
+        if (!q) return reply(" *النظام متيقظ 🚀،اي امر سيتم تنفيذه فورا⚡️*");
 
         const apiUrl = `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
