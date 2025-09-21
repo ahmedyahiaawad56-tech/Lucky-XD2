@@ -1,7 +1,7 @@
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "جيب",
+  pattern: "اظهر",
   alias: ["viewonce", 'retrive'],
   react: '🐳',
   desc: "Owner Only - retrieve quoted message back to user",
@@ -17,7 +17,7 @@ malvin({
 
     if (!match.quoted) {
       return await client.sendMessage(from, {
-        text: "*🍁 Please reply to a view once message!*"
+        text: "* اعمل ريب على الرسالة التي تريد اظهارها*"
       }, { quoted: message });
     }
 
