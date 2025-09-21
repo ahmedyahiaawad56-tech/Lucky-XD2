@@ -9,7 +9,7 @@ const { setPrefix } = require('../lib/prefix');
 
 malvin({
 
-  pattern: "setprefix",
+  pattern: "تغير العلامة",
 
   alias: ["prefix"],
 
@@ -31,7 +31,7 @@ malvin({
 
   setPrefix(newPrefix); // updates without reboot
 
-  return reply(`✅ Prefix updated to *${newPrefix}* — no restart needed.`);
+  return reply(`✅ تم التغير الى*${newPrefix}* — no restart needed.`);
 
 });
 
