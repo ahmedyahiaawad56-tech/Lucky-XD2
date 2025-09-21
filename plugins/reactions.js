@@ -4,7 +4,7 @@ const axios = require("axios");
 
 malvin(
     {
-        pattern: "cry",
+        pattern: "حزين",
         desc: "Send a crying reaction GIF.",
         category: "reaction",
         react: "😢",
@@ -36,8 +36,8 @@ malvin(
                 { quoted: mek }
             );
         } catch (error) {
-            console.error("❌ Error in .cry command:", error);
-            reply(`❌ *Error in .cry command:*\n\`\`\`${error.message}\`\`\``);
+            console.error("❌ حدث خطأ:", error);
+            reply(`❌ *حدث خطأ:*\n\`\`\`${error.message}\`\`\``);
         }
     }
 );
@@ -124,7 +124,7 @@ malvin(
 
 malvin(
     {
-        pattern: "hug",
+        pattern: "حضن",
         desc: "Send a hug reaction GIF.",
         category: "reaction",
         react: "🤗",
@@ -156,8 +156,8 @@ malvin(
                 { quoted: mek }
             );
         } catch (error) {
-            console.error("❌ Error in .hug command:", error);
-            reply(`❌ *Error in .hug command:*\n\`\`\`${error.message}\`\`\``);
+            console.error("❌ حدث خطأ:", error);
+            reply(`❌ *حدث خطأ:*\n\`\`\`${error.message}\`\`\``);
         }
     }
 );
