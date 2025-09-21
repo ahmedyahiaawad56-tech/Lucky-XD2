@@ -2,7 +2,7 @@ const axios = require("axios");
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "fancy",
+  pattern: "زخرف",
   alias: ["font", "style"],
   react: "✍️",
   desc: "Convert text into various fonts.",
