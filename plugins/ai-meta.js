@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 const axios = require('axios');
 
 malvin({
-    pattern: "metaai",
+    pattern: "ميتا",
     alias: ["xeon", "meta"],
     react: "🤖",
     desc: "Talk with Meta AI",
@@ -12,7 +12,7 @@ malvin({
 },
 async (conn, mek, m, { from, q, reply }) => {
     try {
-        if (!q) return reply("❌ Please provide a question to ask Meta AI.");
+        if (!q) return reply(" داير شنو.");
 
         // React: Processing
         await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
