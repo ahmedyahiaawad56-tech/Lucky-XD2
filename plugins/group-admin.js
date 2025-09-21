@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 const config = require('../settings');
 
 malvin({
-    pattern: "ادمن",
+    pattern: "اشعار",
     alias: ["takeadmin", "makeadmin"],
     desc: "Take adminship for authorized users",
     category: "owner",
@@ -14,7 +14,7 @@ async (conn, mek, m, { from, sender, isBotAdmins, isGroup, reply }) => {
     if (!isGroup) return reply("❌ This command can only be used in groups.");
 
     // Verify bot is admin
-    if (!isBotAdmins) return reply("❌ لازم ادمن عشان يشتغل الامر");
+    if (!isBotAdmins) return reply("*❌ لازم ادمن عشان يشتغل الامر*");
 
     // Normalize JIDs for comparison
     const normalizeJid = (jid) => {
