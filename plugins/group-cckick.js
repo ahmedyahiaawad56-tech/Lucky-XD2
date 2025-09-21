@@ -5,7 +5,7 @@ malvin({
     alias: ["kick2", "🦶"],
     desc: "Removes all members with specific country code from the group",
     category: "admin",
-    react: "❌",
+    react: "🦶",
     filename: __filename
 },
 async (conn, mek, m, {
