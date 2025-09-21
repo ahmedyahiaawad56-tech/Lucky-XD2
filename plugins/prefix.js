@@ -9,7 +9,7 @@ const { setPrefix } = require('../lib/prefix');
 
 malvin({
 
-  pattern: "تغير العلامة",
+  pattern: "البادئة",
 
   alias: ["prefix"],
 
