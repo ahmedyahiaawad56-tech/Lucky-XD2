@@ -98,7 +98,7 @@ malvin(
             try {
                 const apiResponse = await axiosInstance.get(apiUrl);
                 if (!apiResponse.data?.download_url) {
-                    throw new Error('Invalid API response');
+                    throw new Error('حدث خطأ في الخادم');
                 }
                 songData = apiResponse.data;
             } catch (apiError) {
