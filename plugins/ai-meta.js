@@ -12,7 +12,7 @@ malvin({
 },
 async (conn, mek, m, { from, q, reply }) => {
     try {
-        if (!q) return reply(" مرحب كيف اقدر اساعدك");
+        if (!q) return reply("🤔خير؟ داير شنو");
 
         // React: Processing
         await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
