@@ -11,7 +11,7 @@ malvin({
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
     try {
-        if (!q) return reply("Please provide a message for the AI.\nExample: `.ai Hello`");
+        if (!q) return reply("خير داير شنو؟");
 
         const apiUrl = `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
@@ -26,7 +26,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
     } catch (e) {
         console.error("Error in AI command:", e);
         await react("❌");
-        reply("An error occurred while communicating with the AI.");
+        reply("حصل خطأ ما");
     }
 });
 
@@ -55,7 +55,7 @@ async (conn, mek, m, { from, args, q, reply, react }) => {
     } catch (e) {
         console.error("Error in OpenAI command:", e);
         await react("❌");
-        reply("An error occurred while communicating with OpenAI.");
+        reply("حصل خطأ ما.");
     }
 });
 
