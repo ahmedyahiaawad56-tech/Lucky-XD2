@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
         }
 
         // Inform user that we're checking
-        await reply("🔄 جاري البحث عن بوتات متصلة .يستغرق الامر بعض الوقت.");
+        await reply("*🔄 جاري البحث عن بوتات متصلة .يستغرق الامر بعض الوقت.*");
 
         const onlineMembers = new Set();
         const groupData = await conn.groupMetadata(from);
@@ -64,7 +64,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
                 conn.ev.off('presence.update', presenceHandler);
                 
                 if (onlineMembers.size === 0) {
-                    return reply("⚠️ Couldn't detect any online members. They might be hiding their presence.");
+                    return reply("*لم يتم اكتشاف بوت متصل❌️*");
                 }
                 
                 const onlineArray = Array.from(onlineMembers);
