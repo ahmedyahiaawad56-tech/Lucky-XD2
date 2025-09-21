@@ -29,7 +29,7 @@ const sendCustomMessage = async (conn, from, message, mek, m) => {
 
 // ==================== KICK COMMAND ====================
 malvin({
-  pattern: "kick",
+  pattern: "وزع",
   alias: ["k", "remove", "nital"],
   desc: "Remove a user from the group",
   category: "group",
@@ -47,7 +47,7 @@ malvin({
 }) => {
   try {
     if (!isGroup) return reply("⚠️ This command only works in *groups*.");
-    if (!isBotAdmins) return reply("❌ I must be *admin* to remove someone.");
+    if (!isBotAdmins) return reply("❌ لازم ادمن عشان تقدر توزع");
     if (!isAdmins && !isCreator) return reply("🔐 Only *group admins* or *owner* can use this command.");
 
     // Consistent user extraction logic
