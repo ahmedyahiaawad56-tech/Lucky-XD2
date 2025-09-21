@@ -19,7 +19,7 @@ async (conn, mek, m, { from, sender, isGroup, reply, quoted, participants }) => 
 
         // 2. VERIFY USER EXISTS
         const [user] = await conn.onWhatsApp(userJid).catch(() => []);
-        if (!user?.exists) return reply("❌ User not found on WhatsApp");
+        if (!user?.exists) return reply("❌ المستخدم غير موجود في الواتس");
 
         // 3. GET PROFILE PICTURE
         let ppUrl;
@@ -91,27 +91,27 @@ async (conn, mek, m, { from, sender, isGroup, reply, quoted, participants }) => 
             `┌─ 📝 *About*\n` +
             `│  ${bio.text}\n` +
             `└─ 🏷️ ${bio.type} Bio${bio.updated ? ` | ⏳ ${bio.updated.toLocaleString()}` : ''}` : 
-            "└─ ❌ No bio available";
+            "└─ ❌ لايوجد وصف";
 
         const accountTypeEmoji = user.isBusiness ? "💼" : user.isEnterprise ? "🏢" : "👤";
         const accountTypeText = user.isBusiness ? "Business" : user.isEnterprise ? "Enterprise" : "Personal";
 
         const userInfo = `
-╭─❖ *USER PROFILE* ❖─
+╭─❖ *ملف المستخدم* ❖─
 │
-│  � *Profile Picture* 👇
+│  � *صورة البروفايل* 👇
 │
 ├─❖ *BASIC INFO* ❖─
-│  📛 *Name*: ${userName}
-│  🔢 *Number*: ${userJid.replace(/@.+/, '')}
+│  📛 *الاسم*: ${userName}
+│  🔢 *الرقم*: ${userJid.replace(/@.+/, '')}
 │  ${accountTypeEmoji} *Account Type*: ${accountTypeText}
 │
 ├─❖ *BIOGRAPHY* ❖─
 ${formattedBio.includes('┌─') ? formattedBio : `│  ${formattedBio}`}
 │
 ├─❖ *ACCOUNT STATUS* ❖─
-│  ✅ *Registered*: ${user.isUser ? "Yes" : "No"}
-│  🛡️ *Verified*: ${user.verifiedName ? "✅ Verified" : "❌ Not verified"}
+│  ✅ *مسجل: ${user.isUser ? "لا" : "نعم"}
+│  🛡️ *موثق*: ${user.verifiedName ? "✅ verified" : "❌ غير مسجل"}
 ${isGroup ? `│  � *Group Role*: ${groupRole}\n` : ''}
 ╰───────────────────
 `.trim();
@@ -125,7 +125,7 @@ ${isGroup ? `│  � *Group Role*: ${groupRole}\n` : ''}
 
     } catch (e) {
         console.error("Person command error:", e);
-        reply(`❌ Error: ${e.message || "Failed to fetch profile"}`);
+        reply(`❌ Error: ${e.message || "فشل في الحصول على معلومات البروفايل "}`);
     }
 });
 
