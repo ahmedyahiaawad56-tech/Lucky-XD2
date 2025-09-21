@@ -13,7 +13,7 @@ const ensureOwnerFile = () => {
 
 // Command: Add a temporary owner
 malvin({
-    pattern: "setsudo",
+    pattern: "اضافة مالك",
     alias: ["addsudo", "addowner","sudo"],
     desc: "Add a temporary owner",
     category: "owner",
@@ -40,9 +40,9 @@ malvin({
         const uniqueOwners = [...new Set(owners)];
         fs.writeFileSync(OWNER_PATH, JSON.stringify(uniqueOwners, null, 2));
 
-        const successMsg = "✅ Successfully Added User As Temporary Owner";
+        const successMsg = "✅ تم الرفع";
         await conn.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/4itzeu.jpg" },
+            image: { url: "https://i.postimg.cc/15BXW0px/IMG-20250908-WA0358.jpg" },
             caption: successMsg
         }, { quoted: mek });
     } catch (err) {
