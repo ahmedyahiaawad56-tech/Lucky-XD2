@@ -4,10 +4,10 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 // remove only member
 
 malvin({
-    pattern: "removemembers",
+    pattern: "جحيم",
     alias: ["kickall", "endgc", "endgroup"],
     desc: "Remove all non-admin members from the group.",
-    react: "🎉",
+    react: "☠️",
     category: "group",
     filename: __filename,
 }, 
@@ -27,7 +27,7 @@ async (conn, mek, m, {
         }
 
         if (!isBotAdmins) {
-            return reply("I need to be an admin to execute this command.");
+            return reply("لازم ادمن عشان انفذ الامر");
         }
 
         const allParticipants = groupMetadata.participants;
