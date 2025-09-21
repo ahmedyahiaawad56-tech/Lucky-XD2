@@ -3,7 +3,7 @@ const stickerConverter = require('../data/sticker-converter');
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: 'convert',
+    pattern: 'تحويل',
     alias: ['sticker2img', 'stoimg', 'stickertoimage', 's2i'],
     desc: 'Convert stickers to images',
     category: 'convert',
@@ -19,13 +19,13 @@ malvin({
 
     if (message.quoted.mtype !== 'stickerMessage') {
         return await client.sendMessage(from, {
-            text: "❌ Only sticker messages can be converted"
+            text: "❌ فقط يمكن تحويل الملصقات"
         }, { quoted: message });
     }
 
     // Send processing message
     await client.sendMessage(from, {
-        text: "🔄 Converting sticker to image..."
+        text: "🔄 جاري تحويل الملصق الى صورة"
     }, { quoted: message });
 
     try {
