@@ -18,14 +18,14 @@ module.exports = {
   SESSION_ID: settings.SESSION_ID || process.env.SESSION_ID || "",
   PREFIX: getConfig("PREFIX") || "ً" || settings.PREFIX,
   CHATBOT: getConfig("CHATBOT") || "on",
-  BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "ʟᴜᴄᴋʏ-xᴅ",
+  BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
   MODE: getConfig("MODE") || process.env.MODE || "private",
   REPO: process.env.REPO || "https://github.com/Tomilucky218/Lucky-XD2",
   BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
   // ===== OWNER & DEVELOPER SETTINGS =====
   OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "201013346322",
-  OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "ʟᴜᴄᴋʏ ➋➊➑",
+  OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
   DEV: process.env.DEV || "201013346322",
   DEVELOPER_NUMBER: '201013346322@s.whatsapp.net',
   MENU_AUDIO_URL: process.env.MENU_AUDIO_URL || 'https://files.catbox.moe/fzvaj0.mp3',
@@ -52,7 +52,7 @@ NEWSLETTER_JID: process.env.NEWSLETTER_JID || '120363420656466131@newsletter',
   AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
   AUTO_TYPING: process.env.AUTO_TYPING || "false",
   MENTION_REPLY: process.env.MENTION_REPLY || "false",
-  MENU_IMAGE_URL: getConfig("MENU_IMAGE_URL") || "https://files.catbox.moe/4itzeu.jpg",
+  MENU_IMAGE_URL: getConfig("MENU_IMAGE_URL") || "https://i.postimg.cc/15BXW0px/IMG-20250908-WA0358.jpg",
 
   // ===== SECURITY & ANTI-FEATURES =====
   ANTI_DELETE: process.env.ANTI_DELETE || "true",
