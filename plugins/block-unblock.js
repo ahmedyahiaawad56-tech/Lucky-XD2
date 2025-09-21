@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "block",
+    pattern: "بلوك",
     desc: "Blocks a person",
     category: "owner",
     react: "🚫",
@@ -25,7 +25,7 @@ async (conn, m, { reply, q, react }) => {
         jid = q.replace(/[@\s]/g, '') + "@s.whatsapp.net"; // If manually typing a JID
     } else {
         await react("❌");
-        return reply("Please mention a user or reply to their message.");
+        return reply("ريب لرسالة الشخص الذي تريد حظره");
     }
 
     try {
@@ -40,7 +40,7 @@ async (conn, m, { reply, q, react }) => {
 });
 
 malvin({
-    pattern: "unblock",
+    pattern: "فك",
     desc: "Unblocks a person",
     category: "owner",
     react: "🔓",
