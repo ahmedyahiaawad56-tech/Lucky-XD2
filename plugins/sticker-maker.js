@@ -11,7 +11,7 @@ const Config = require('../settings');
 
 malvin(
     {
-        pattern: 'take',
+        pattern: 'حقوق',
         alias: ['rename', 'stake'],
         desc: 'Create a sticker with a custom pack name.',
         category: 'owner',
