@@ -28,7 +28,7 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
         try {
             ppUrl = await conn.profilePictureUrl(targetJid, "image");
         } catch (e) {
-            return reply("🖼️  هذا الشخص لايملك بروفايل او لايمكن الوصول اليه");
+            return reply("*🖼️  هذا الشخص لايملك بروفايل او لايمكن الوصول اليه*");
         }
 
         // Get the user's name or number for the caption
@@ -51,7 +51,7 @@ async (conn, mek, m, { from, prefix, l, quoted, body, isCmd, command, args, q, i
 
     } catch (e) {
         // Reply with a generic error message and log the error
-        reply("🛑 حدث خطأ لم استطع جلب البروفايل");
+        reply("*🛑 حدث خطأ لم استطع جلب البروفايل*");
         l(e); // Log the error for debugging
     }
 });
