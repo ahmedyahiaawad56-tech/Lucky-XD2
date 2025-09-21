@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
         }
 
         // Inform user that we're checking
-        await reply("🔄 جاري البحث عن اشخاص متصلون .يستغرق الامر بعض الوقت.");
+        await reply("🔄 جاري البحث عن بوتات متصلة .يستغرق الامر بعض الوقت.");
 
         const onlineMembers = new Set();
         const groupData = await conn.groupMetadata(from);
