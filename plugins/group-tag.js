@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 
 // Fixed & Created By Malvin x Jawad
 malvin({
-  pattern: "الكل",
+  pattern: "@",
   alias: ["tag", "h"],  
   react: "🔊",
   desc: "To Tag all Members for Any Message/Media",
