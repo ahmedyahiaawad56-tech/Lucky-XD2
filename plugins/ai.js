@@ -4,8 +4,8 @@ const axios = require("axios");
 const { malvin } = require("../malvin");
 
 malvin({
-    pattern: "lucky",
-    alias: "lucky",
+    pattern: "تنصيب",
+    alias: "luck",
     desc: "Interact with ChatGPT using the XD Api.",
     category: "ai",
     react: "🤖",
