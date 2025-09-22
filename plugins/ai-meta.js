@@ -2,9 +2,9 @@ const { malvin } = require('../malvin');
 const axios = require('axios');
 
 malvin({
-    pattern: "ميتا",
+    pattern: "مطور",
     alias: ["xeon", "meta"],
-    react: "🤖",
+    react: "👨‍💻",
     desc: "Talk with Meta AI",
     category: "ai",
     use: '.metaai <your question>',
@@ -12,7 +12,7 @@ malvin({
 },
 async (conn, mek, m, { from, q, reply }) => {
     try {
-        if (!q) return reply("*يامرحب عايز مساعدة في شنو؟*");
+        if (!q) return reply("*تم تطوير هذا البوت من قبل [𝐦𝐚𝐥𝐯𝐢𝐧__XD]  كل الأكواد  والاوامر تعمل على هذا الرقم؛لتواصل مع المطور👨‍💻* [https://was.me/249991519998]");
 
         // React: Processing
         await conn.sendMessage(from, { react: { text: '⏳', key: m.key } });
