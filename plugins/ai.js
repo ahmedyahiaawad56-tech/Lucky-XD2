@@ -14,7 +14,7 @@ malvin({
 }, async (conn, mek, m, { from, args, q, reply }) => {
     try {
         // Vérification de l'entrée utilisateur
-        if (!q) return reply("⚠️ Please provide a query for Lucky Ai.\n\nExample:\n.lucky What is AI?");
+        if (!q) return reply("*⚙️اختر الإجراء الذي تريد:[🔓فتح/🔒قفل]*");
 
         // Utilisation de `${text}` dans le endpoint API
         const text = q;  // Texte de la requête de l'utilisateur
