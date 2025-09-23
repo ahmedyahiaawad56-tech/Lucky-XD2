@@ -42,7 +42,7 @@ malvin({
 
         const successMsg = "*تمت اضافة الرقم لنظام البوت🤖✅️*";
         await conn.sendMessage(from, {
-            image: { url: "https://i.postimg.cc/15BXW0px/IMG-20250908-WA0358.jpg" },
+            image: { url: "https://files.catbox.moe/to5169.jpg" },
             caption: successMsg
         }, { quoted: mek });
     } catch (err) {
@@ -80,7 +80,7 @@ malvin({
 
         const successMsg = "*تمت ازالة الرقم من نظام البوت🗑*";
         await conn.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/4itzeu.jpg" },
+            image: { url: "https://files.catbox.moe/to5169.jpg" },
             caption: successMsg
         }, { quoted: mek });
     } catch (err) {
@@ -108,13 +108,13 @@ malvin({
             return reply("❌ No temporary owners found.");
         }
 
-        let listMessage = "`*قائمة المتحكمين🤴*:`\n\n";
+        let listMessage = "`قائمة المتحكمين🤴:`\n\n";
         owners.forEach((owner, i) => {
             listMessage += `${i + 1}. ${owner.replace("@s.whatsapp.net", "")}\n`;
         });
 
         await conn.sendMessage(from, {
-            image: { url: "https://files.catbox.moe/4itzeu.jpg" },
+            image: { url: "https://files.catbox.moe/to5169.jpg" },
             caption: listMessage
         }, { quoted: mek });
     } catch (err) {
