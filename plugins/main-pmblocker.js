@@ -2,9 +2,9 @@ const { malvin } = require('../malvin');
 const config = require('../settings');
 
 malvin({
-    pattern: "pmblock",
+    pattern: "بلوك بف",
     alias: ["pmblocker"],
-    desc: "Enable or disable private message blocking for non-owners.",
+    desc: "*هذا الامر يعمل فقط في الخاص❌️*",
     category: "security",
     filename: __filename,
     usage: "pmblock [on/off]",
@@ -13,7 +13,7 @@ malvin({
 }, async (conn, mek, m, { args, reply }) => {
     const action = args[0]?.toLowerCase();
 
-    if (!action || !['on', 'off'].includes(action)) {
+    if (!action || !['تشغيل', 'off'].includes(action)) {
         return reply(`
 ❓ *Invalid Usage*
 
