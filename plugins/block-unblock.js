@@ -25,7 +25,7 @@ async (conn, m, { reply, q, react }) => {
         jid = q.replace(/[@\s]/g, '') + "@s.whatsapp.net"; // If manually typing a JID
     } else {
         await react("❌");
-        return reply("*ريب على رسالة الشخص الذي تريد حظر *");
+        return reply("*ريب على رسالة الشخص الذي اريد حظره*");
     }
 
     try {
