@@ -2,7 +2,7 @@ const axios = require("axios");
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "apk",
+  pattern: "تطبيق",
   alias: ["modapk", "apkdownload"],
   react: '📦',
   desc: "Download APK files using NexOracle API.",
