@@ -32,12 +32,12 @@ async (conn, mek, m, {
 
         const messageText = body
             .replace(new RegExp(`^${config.PREFIX}${command}\\s*`, 'i'), '')
-            .trim() || "Attention Admins ⚠️";
+            .trim() || "*منشن ادمن👥️️*";
 
         let teks = `📢 *Admin Tag Alert*\n`;
-        teks += `🏷️ *Group:* ${groupName}\n`;
-        teks += `👥 *Admins:* ${admins.length}\n`;
-        teks += `💬 *Message:* ${messageText}\n\n`;
+        teks += `🏷️ *قروب:* ${groupName}\n`;
+        teks += `👥 *ادمن:* ${admins.length}\n`;
+        teks += `💬 *رسالة:* ${messageText}\n\n`;
         teks += `┌──⊷ *Admin Mentions*\n`;
 
         for (let admin of admins) {
