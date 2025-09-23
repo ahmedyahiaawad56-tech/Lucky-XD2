@@ -105,7 +105,7 @@ malvin({
         owners = [...new Set(owners)];
 
         if (owners.length === 0) {
-            return reply("❌ No temporary owners found.");
+            return reply("*لم يتم اضافة متحكم❌️*");
         }
 
         let listMessage = "`قائمة المتحكمين🤴:`\n\n";
