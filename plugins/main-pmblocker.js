@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 const config = require('../settings');
 
 malvin({
-    pattern: "بلوك بف",
+    pattern: "حظر بف",
     alias: ["pmblocker"],
     desc: "*هذا الامر يعمل فقط في الخاص❌️*",
     category: "security",
