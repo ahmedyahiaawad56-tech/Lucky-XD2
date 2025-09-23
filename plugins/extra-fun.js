@@ -12,7 +12,7 @@ malvin({
 }, async (conn, mek, m, { args, reply }) => {
   try {
     if (args.length < 2) {
-      return reply("Please mention two users to calculate compatibility.\n");
+      return reply("*قم بعمل منشن لشخصين المراد ربطهم✨️*");
     }
 
     let user1 = m.mentionedJid[0]; 
