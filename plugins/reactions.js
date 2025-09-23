@@ -20,7 +20,7 @@ malvin(
             let message = mentionedUser
                 ? `${sender} is crying over @${mentionedUser.split("@")[0]}`
                 : isGroup
-                ? `${sender} حزين جدا😢`
+                ? `${sender} *حزين جدا😢*`
                 : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
 
             const apiUrl = "https://api.waifu.pics/sfw/cry";
@@ -138,7 +138,7 @@ malvin(
             let isGroup = m.isGroup;
 
             let message = mentionedUser
-                ? `${sender} hugged @${mentionedUser.split("@")[0]}`
+                ? `${sender} *جيب حضن🫂* @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} جيب حضن🫂`
                 : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
@@ -400,7 +400,7 @@ malvin(
 
 malvin(
     {
-        pattern: "blush",
+        pattern: "خجل",
         desc: "Send a blush reaction GIF.",
         category: "reaction",
         react: "😊",
@@ -414,10 +414,10 @@ malvin(
             let isGroup = m.isGroup;
 
             let message = mentionedUser
-                ? `${sender} is blushing at @${mentionedUser.split("@")[0]}`
+                ? `${sender} 🙈❤ @${mentionedUser.split("@")[0]}`
                 : isGroup
                 ? `${sender} is blushing!`
-                : `> © Powered By Lucky Tech Hub 🖤`;
+                : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
 
             const apiUrl = "https://api.waifu.pics/sfw/blush";
             let res = await axios.get(apiUrl);
@@ -497,7 +497,7 @@ malvin(
             let message = mentionedUser
                 ? `${sender} gave a high-five to @${mentionedUser.split("@")[0]}`
                 : isGroup
-                ? `${sender} كفك ياعسل 👋`
+                ? `${sender} *كفك ✋️*`
                 : `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
 
             const apiUrl = "https://api.waifu.pics/sfw/highfive";
@@ -1013,7 +1013,7 @@ malvin(
 
 malvin(
     {
-        pattern: "kiss",
+        pattern: "بوسه",
         desc: "Send a kiss reaction GIF.",
         category: "reaction",
         react: "💋",
@@ -1029,11 +1029,11 @@ malvin(
             let message;
             if (mentionedUser) {
                 let target = `@${mentionedUser.split("@")[0]}`;
-                message = `${sender} kissed ${target}`;
+                message = `${sender} *مح💋* ${target}`;
             } else if (isGroup) {
-                message = `${sender} kissed everyone`;
+                message = `${sender} *مححح💋*`;
             } else {
-                message = `> © Powered By Lucky Tech Hub 🖤`;
+                message = `> © Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub 🖤`;
             }
 
             const apiUrl = "https://api.waifu.pics/sfw/kiss";
