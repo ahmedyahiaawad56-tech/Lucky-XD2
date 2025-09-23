@@ -40,7 +40,7 @@ malvin({
         const uniqueOwners = [...new Set(owners)];
         fs.writeFileSync(OWNER_PATH, JSON.stringify(uniqueOwners, null, 2));
 
-        const successMsg = "✅ تم الرفع";
+        const successMsg = "*تمت اضافة الرقم لنظام البوت🤖✅️*";
         await conn.sendMessage(from, {
             image: { url: "https://i.postimg.cc/15BXW0px/IMG-20250908-WA0358.jpg" },
             caption: successMsg
@@ -53,11 +53,11 @@ malvin({
 
 // Command: Remove a temporary owner
 malvin({
-    pattern: "delsudo",
+    pattern: "خفض",
     alias: ["delowner", "deletesudo"],
     desc: "Remove a temporary owner",
     category: "owner",
-    react: "🫩",
+    react: "🗑",
     filename: __filename
 }, async (conn, mek, m, { from, args, q, isCreator, reply }) => {
     try {
@@ -78,7 +78,7 @@ malvin({
         const updated = owners.filter(x => x !== target);
         fs.writeFileSync(OWNER_PATH, JSON.stringify(updated, null, 2));
 
-        const successMsg = "✅ Successfully Removed User As Temporary Owner";
+        const successMsg = "*تمت ازالة الرقم من نظام البوت🗑*";
         await conn.sendMessage(from, {
             image: { url: "https://files.catbox.moe/4itzeu.jpg" },
             caption: successMsg
@@ -91,7 +91,7 @@ malvin({
 
 // Command: List all temporary owners
 malvin({
-    pattern: "listsudo",
+    pattern: "متحكم",
     alias: ["listowner"],
     desc: "List all temporary owners",
     category: "owner",
@@ -108,7 +108,7 @@ malvin({
             return reply("❌ No temporary owners found.");
         }
 
-        let listMessage = "`🤴 List of Sudo Owners:`\n\n";
+        let listMessage = "`*قائمة المتحكمين🤴*:`\n\n";
         owners.forEach((owner, i) => {
             listMessage += `${i + 1}. ${owner.replace("@s.whatsapp.net", "")}\n`;
         });
