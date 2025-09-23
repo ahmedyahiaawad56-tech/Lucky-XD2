@@ -4,7 +4,7 @@ const { malvin } = require('../malvin');
 const axios = require('axios');
 
 malvin({
-    pattern: "nsfw", // Nom de la commande
+    pattern: "اباحي", // Nom de la commande
     desc: "Display a list of NSFW options",
     category: "fun",
     use: '.nsfw',
@@ -15,18 +15,18 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
     try {
         // Liste des options NSFW
         const nsfwList = `
-   *❦ \` ＳＥＸＹ ＨＵＢ.🍭\`*
+   *❦ \` اباحي🍭\`*
 
-➊ *EJACULATION💦*
-➋ *PENIS🍆*
-➌ *EREC🌭*
-➍ *NUDE🍜*
-➎ *SEX🫦*
-➏ *CUTE🩷*
-➏ *ORGASM🌊*
-➐ *ANAL🕳️*
-➒ *SUSPENSION🍑*
-➓ *KISS💋*
+➊ *قذف💦*
+➋ *زب🍆*
+➌ *انتصاب🌭*
+➍ *نودز🍜*
+➎ *سكس🫦*
+➏ *لطيف🩷*
+➏ *متعة🌊*
+➐ *شرجي🕳️*
+➒ *طيز🍑*
+➓ *مص👄*
 
 ────────────────
 *_Simply type the number corresponding to the option you'd like to choose._*
@@ -113,7 +113,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
     }
 });
 malvin({
-    pattern: "erec", // Nom de la commande
+    pattern: "طيز", // Nom de la commande
     desc: "Fetch a NSFW image related to the command",
     category: "fun",
     use: '.erec',
@@ -134,10 +134,10 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
             // Envoi de l'image avec le caption
             await conn.sendMessage(from, {
                 image: { url: imageUrl },
-                caption: `Here your ${command} image 🔞🍆🍑.\n> © Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ʟᴜᴄᴋʏ-xᴅ😋🍑🔞.`,
+                caption: `Here your ${command} image 🔞🍆🍑.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋🍑🔞.`,
             }, { quoted: mek });
         } else {
-            await reply('❌ No image found for this category.');
+            await reply('*محتوى حساس لايمكن العرض❌️*');
         }
     } catch (e) {
         console.error(e);
@@ -145,7 +145,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
     }
 });
 malvin({
-    pattern: "nude", // Nom de la commande
+    pattern: "نودز", // Nom de la commande
     desc: "Display a nude NSFW image",
     category: "fun",
     use: '.nude',
@@ -168,10 +168,10 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
             // Envoi de l'image dans le chat
             await conn.sendMessage(from, {
                 image: { url: imageUrl },
-                caption: 'Here is your nude NSFW image 🔞🔥.\n> © Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ʟᴜᴄᴋʏ-xᴅ😋🔥🔞.'
+                caption: 'Here is your nude NSFW image 🔞🔥.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋🔥🔞.'
             }, { quoted: mek });
         } else {
-            reply('❌ Unable to fetch image. Please try again later.');
+            reply('*محتوى حساس لايمكن العرض❌️*');
         }
     } catch (e) {
         console.error(e);
@@ -179,7 +179,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
     }
 });
 malvin({
-    pattern: "sex", // Nom de la commande
+    pattern: "سكس", // Nom de la commande
     desc: "Display a NSFW sex image",
     category: "fun",
     use: '.sex',
@@ -202,10 +202,10 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
             // Envoi de l'image dans le chat
             await conn.sendMessage(from, {
                 image: { url: imageUrl },
-                caption: 'Here is your sex NSFW image 🔞🔥.\n> © Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ʟᴜᴄᴋʏ-xᴅ😋🔥🔞.'
+                caption: 'Here is your sex NSFW image 🔞🔥.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋🔥🔞.'
             }, { quoted: mek });
         } else {
-            reply('❌ Unable to fetch image. Please try again later.');
+            reply('*خطأ❌️ لايمكن العرض*');
         }
     } catch (e) {
         console.error(e);
@@ -213,7 +213,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
     }
 });
 malvin({
-    pattern: "cute", // Nom de la commande
+    pattern: "لطيف", // Nom de la commande
     desc: "Display a NSFW cute image",
     category: "fun",
     use: '.cute',
@@ -236,7 +236,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
             // Envoi de l'image dans le chat
             await conn.sendMessage(from, {
                 image: { url: imageUrl },
-                caption: 'Here is your cute NSFW image 🔞💖.\n> © Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ʟᴜᴄᴋʏ-xᴅ😋💖🔞.'
+                caption: 'Here is your cute NSFW image 🔞💖.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋💖🔞.'
             }, { quoted: mek });
         } else {
             reply('❌ Unable to fetch image. Please try again later.');
