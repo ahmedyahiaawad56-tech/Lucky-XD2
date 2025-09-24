@@ -13,7 +13,7 @@ const config = require('../settings');
 
 malvin({
     pattern: "user",
-    react: "✅", 
+    react: "🚀", 
     desc: "Get owner number",
     category: "main",
     filename: __filename
