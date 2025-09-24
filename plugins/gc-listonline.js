@@ -64,7 +64,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
                 conn.ev.off('presence.update', presenceHandler);
                 
                 if (onlineMembers.size === 0) {
-                    return reply("*لم يتم اكتشاف معرص متصل❌️*");
+                    return reply("*لم يتم اكتشاف معرص متصل 🚫،ربما قام المعرص باخفاء الظهور");
                 }
                 
                 const onlineArray = Array.from(onlineMembers);
