@@ -2,7 +2,7 @@ const { malvin } = require('../malvin');
 const config = require('../settings');
 
 malvin({
-    pattern: "حظر بف",
+    pattern: "برايفت",
     alias: ["pmblocker"],
     desc: "*هذا الامر يعمل فقط في الخاص❌️*",
     category: "security",
@@ -13,7 +13,7 @@ malvin({
 }, async (conn, mek, m, { args, reply }) => {
     const action = args[0]?.toLowerCase();
 
-    if (!action || !['تشغيل', 'off'].includes(action)) {
+    if (!action || !['on', 'off'].includes(action)) {
         return reply(`
 ❓ *Invalid Usage*
 
