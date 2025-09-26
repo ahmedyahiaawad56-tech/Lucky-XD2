@@ -5,7 +5,7 @@ const { malvin, commands } = require("../malvin");
 const config = require("../settings");
 
 malvin({
-  pattern: "ship",
+  pattern: "علاقة",
   alias: ["match", "love"],
   desc: "Randomly pairs the command user with another group member.",
   react: "❤️",
@@ -29,7 +29,7 @@ malvin({
       } while (randomPair === sender);
     }
 
-    const message = `💘 *Match Found!* 💘\n❤️ @${sender.split("@")[0]} + @${randomPair.split("@")[0]}\n💖 Congratulations! 🎉`;
+    const message = `💘 *تم العثور على علاقة* 💘\n❤️ @${sender.split("@")[0]} + @${randomPair.split("@")[0]}\n💖 مبروك 🎉`;
 
     await conn.sendMessage(from, {
       text: message,
