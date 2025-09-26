@@ -12,7 +12,7 @@ function getFlagEmoji(countryCode) {
 }
 
 malvin({
-    pattern: "check",
+    pattern: "دولة",
     desc: "Checks the country calling code and returns the corresponding country name(s) with flag",
     category: "utility",
     filename: __filename
