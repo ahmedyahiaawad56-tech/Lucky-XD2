@@ -8,7 +8,7 @@ malvin({
     alias: "luck",
     desc: "Interact with ChatGPT using the XD Api.",
     category: "ai",
-    react: "🤖",
+    react: "⚙️",
     use: ".lucky <your query>",
     filename: __filename,
 }, async (conn, mek, m, { from, args, q, reply }) => {
