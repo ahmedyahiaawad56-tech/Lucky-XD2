@@ -30,7 +30,7 @@ malvin(
     },
     async (malvin, mek, m, { text, reply }) => {
         try {
-            if (!text) return reply('🎵 *Usage:* .song <query/url>\nExample: .song https://youtu.be/ox4tmEV6-QU\n.song Alan Walker faded');
+            if (!text) return reply('*اكتب اسم الاغنيه او انسخ رابط يوتيوب.مثال اغنيه سولجا، اغنيهhttps://youtube/.com*');
 
             // Send initial reaction
             try {
