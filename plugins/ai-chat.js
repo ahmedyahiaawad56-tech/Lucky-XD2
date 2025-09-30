@@ -11,7 +11,7 @@ malvin({
 },
 async (conn, mek, m, { from, args, q, reply, react }) => {
     try {
-        if (!q) return reply(" *النظام متيقظ 🚀،اي امر سيتم تنفيذه فورا*");
+        if (!q) return reply("_النظام متيقظ وجاهز لتنفيذ الاوامر⚡_");
 
         const apiUrl = `https://lance-frank-asta.onrender.com/api/gpt?q=${encodeURIComponent(q)}`;
         const { data } = await axios.get(apiUrl);
