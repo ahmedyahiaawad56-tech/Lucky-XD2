@@ -24,7 +24,7 @@ module.exports = {
   BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
   // ===== OWNER & DEVELOPER SETTINGS =====
-  OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "249991519998",
+  OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "201013346322",
   OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
   DEV: process.env.DEV || "249991519998",
   DEVELOPER_NUMBER: '249991519998@s.whatsapp.net',
