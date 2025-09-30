@@ -19,7 +19,7 @@ module.exports = {
   PREFIX: getConfig("PREFIX") || "ً" || settings.PREFIX,
   CHATBOT: getConfig("CHATBOT") || "on",
   BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "ʟᴜᴄᴋʏ-xᴅ",
-  MODE: getConfig("MODE") || process.env.MODE || "public",
+  MODE: getConfig("MODE") || process.env.MODE || "private",
   REPO: process.env.REPO || "https://github.com/Tomilucky218/Lucky-XD2",
   BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
