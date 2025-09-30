@@ -24,10 +24,10 @@ module.exports = {
   BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
   // ===== OWNER & DEVELOPER SETTINGS =====
-  OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "201013346322",
+  OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "249991519998",
   OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
-  DEV: process.env.DEV || "201013346322",
-  DEVELOPER_NUMBER: '201013346322@s.whatsapp.net',
+  DEV: process.env.DEV || "249991519998",
+  DEVELOPER_NUMBER: '249991519998@s.whatsapp.net',
   MENU_AUDIO_URL: process.env.MENU_AUDIO_URL || 'https://files.catbox.moe/byn5sc.mp3',
 NEWSLETTER_JID: process.env.NEWSLETTER_JID || '120363420656466131@newsletter',
 
