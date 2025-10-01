@@ -22,18 +22,18 @@ malvin({
     let allGroups = await conn.groupFetchAllParticipating();
     let groupIds = Object.keys(allGroups); // Extract group IDs
 
-    reply(`📢 Sending Broadcast To ${groupIds.length} Groups...\n⏳ Estimated Time: ${groupIds.length * 1.5} seconds`);
+    reply(`📢جاري النشر في ${groupIds.length} قروب...\nالوقت المقدر⏳️: ${groupIds.length * 1.5} ثانية`);
 
     for (let groupId of groupIds) {
       try {
         await sleep(1500); // Avoid rate limits
         await conn.sendMessage(groupId, { text: q }); // Sends only the provided text
       } catch (err) {
-        console.log(`❌ Failed to send broadcast to ${groupId}:`, err);
+        console.log(`❌️حدث خطأ لم يتم النشر ${groupId}:`, err);
       }
     }
 
-    return reply(`✅ Successfully sent broadcast to ${groupIds.length} groups!`);
+    return reply(` ✅️تم النشر في  ${groupIds.length} قروب.`);
     
   } catch (err) {
     await m.error(`❌ Error: ${err}\n\nCommand: broadcast`, err);
