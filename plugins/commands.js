@@ -2,10 +2,10 @@ const config = require('../settings');
 const { malvin, commands } = require('../malvin');
 
 malvin({
-    pattern: "list",
+    pattern: "قائمة",
     alias: ["listcmd", "commands"],
     desc: "Menu the bot",
-    category: "menu",
+    category: "قائمة",
     react: "⚡",
     filename: __filename
 }, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
