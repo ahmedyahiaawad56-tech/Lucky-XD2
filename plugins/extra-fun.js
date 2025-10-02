@@ -2,7 +2,7 @@ const { malvin } = require("../malvin");
 const config = require('../settings');
 
 malvin({
-  pattern: "ربط",
+  pattern: "حب",
   alias: ["friend", "fcheck"],
   desc: "Calculate the compatibility score between two users.",
   category: "fun",
@@ -12,7 +12,7 @@ malvin({
 }, async (conn, mek, m, { args, reply }) => {
   try {
     if (args.length < 2) {
-      return reply("*قم بعمل منشن لشخصين المراد ربطهم✨️*");
+      return reply("*♡قم بعمل منشن لشخصين لمعرفة نسبة الحب بينهم💞*");
     }
 
     let user1 = m.mentionedJid[0]; 
@@ -21,23 +21,23 @@ malvin({
     const specialNumber = config.DEV ? `${config.DEV}@s.whatsapp.net` : null;
 
     // Calculate a random compatibility score (between 1 to 1000)
-    let compatibilityScore = Math.floor(Math.random() * 1000) + 1;
+    let compatibilityScore = Math.floor(Math.random() * 100) + 1;
 
     // Check if one of the mentioned users is the special number
     if (user1 === specialNumber || user2 === specialNumber) {
-      compatibilityScore = 1000; // Special case for DEV number
-      return reply(`💖 Compatibility between @${user1.split('@')[0]} and @${user2.split('@')[0]}: ${compatibilityScore}+/1000 💖`);
+      compatibilityScore = 100; // Special case for DEV number
+      return reply(`نسية الخب بين @${user1.split('@')[0]} و @${user2.split('@')[0]}: ${compatibilityScore}+/100 💖`);
     }
 
     // Send the compatibility message
     await conn.sendMessage(mek.chat, {
-      text: `💖 Compatibility between @${user1.split('@')[0]} and @${user2.split('@')[0]}: ${compatibilityScore}/1000 💖`,
+      text: `نسبة الحب بين💞 @${user1.split('@')[0]} و @${user2.split('@')[0]}: ${compatibilityScore}/100 💖`,
       mentions: [user1, user2],
     }, { quoted: mek });
 
   } catch (error) {
     console.log(error);
-    reply(`❌ Error: ${error.message}`);
+    reply(`❌ خطأ: ${error.message}`);
   }
 });
 
@@ -100,22 +100,22 @@ async (conn, mek, m, { from, q, reply }) => {
 });
 
 malvin({
-    pattern: "compliment",
+    pattern: "كسير",
     desc: "Give a nice compliment",
     category: "fun",
-    react: "😊",
+    react: "😉",
     filename: __filename,
     use: "@tag (optional)"
 }, async (conn, mek, m, { reply }) => {
     let compliments = [
-        "You're amazing just the way you are! 💖",
-        "You light up every room you walk into! 🌟",
-        "Your smile is contagious! 😊",
-        "You're a genius in your own way! 🧠",
-        "You bring happiness to everyone around you! 🥰",
-        "You're like a human sunshine! ☀️",
-        "Your kindness makes the world a better place! ❤️",
-        "You're unique and irreplaceable! ✨",
+        "*انت تضيئ اي مكان ندخله 🌟*",
+        "*انت فريد ولا يمكن استبدالك😔*",
+        "*انت تحفة فنية تمشي على الارض 🎨*",
+        "*انت موهوب جدآ،والعالم بحاجة لمهاراتك🎭!*",
+        "*حتى الجليد يذوب من روعة شخصيتك😔❤️*",
+        "*انت عب لدرجة ان الظلام يغار منك😔✨️*",
+        "*ابتسامتك معدية😍*",
+        "",
         "You're a great listener and a wonderful friend! 🤗",
         "Your positive vibes are truly inspiring! 💫",
         "You're stronger than you think! 💪",
