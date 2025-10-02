@@ -22,7 +22,7 @@ malvin({
     let allGroups = await conn.groupFetchAllParticipating();
     let groupIds = Object.keys(allGroups); // Extract group IDs
 
-    reply(`📢جاري النشر في ${groupIds.length} قروب...\nالوقت المقدر⏳️: ${groupIds.length * 1.5} ثانية`);
+    reply(`📢جاري النشر في ${groupIds.length} روم...\nالوقت المقدر⏳️: ${groupIds.length * 1.5} ثانية`);
 
     for (let groupId of groupIds) {
       try {
@@ -33,7 +33,7 @@ malvin({
       }
     }
 
-    return reply(` ✅️تم النشر في  ${groupIds.length} قروب.`);
+    return reply(`*✅️تم النشر في ${groupIds.length} روم.*`);
     
   } catch (err) {
     await m.error(`❌ Error: ${err}\n\nCommand: broadcast`, err);
