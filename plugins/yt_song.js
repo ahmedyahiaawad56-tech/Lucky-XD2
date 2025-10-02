@@ -30,7 +30,7 @@ malvin(
     },
     async (malvin, mek, m, { text, reply }) => {
         try {
-            if (!text) return reply('*اكتب اسم الاغنيه او انسخ رابط يوتيوب.مثال اغنيه سولجا، اغنيهhttps://youtube/.com*');
+            if (!text) return reply('*اكتب اسم الاغنية 🎶 او انسخ رابط يوتيوب*\n\n*مثال:اغنية سولجا،اغنيةhttps://youtube..*');
 
             // Send initial reaction
             try {
