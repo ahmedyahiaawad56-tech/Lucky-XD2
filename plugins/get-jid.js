@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "jid",
+    pattern: "كود",
     alias: ["id", "chatid", "gjid"],  
     desc: "Get full JID of current chat/user (Creator Only)",
     react: "🆔",
