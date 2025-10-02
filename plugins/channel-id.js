@@ -1,7 +1,7 @@
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "newsletter",
+  pattern: "ايدي",
   alias: ["cjid", "id"],
   react: "📡",
   desc: "Get WhatsApp Channel info from link",
@@ -36,7 +36,7 @@ malvin({
 │ 👥 *Followers:* ${metadata.subscribers?.toLocaleString() || "N/A"}
 │ 🗓️ *Created:* ${metadata.creation_time ? new Date(metadata.creation_time * 1000).toLocaleString("id-ID") : "Unknown"}
 │
-╰─⭓ Powered By *Lucky Tech Hub*
+╰─⭓ Powered By *𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub*
 `;
 
     if (metadata.preview) {
