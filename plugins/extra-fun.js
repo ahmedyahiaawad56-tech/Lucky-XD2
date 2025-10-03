@@ -108,26 +108,26 @@ malvin({
     use: "@tag (optional)"
 }, async (conn, mek, m, { reply }) => {
     let compliments = [
-        "*انت تضيئ اي مكان ندخله 🌟*",
+        "*انت تضيئ اي مكان تدخله 🌟*",
         "*انت فريد ولا يمكن استبدالك😔*",
         "*انت تحفة فنية تمشي على الارض 🎨*",
         "*انت موهوب جدآ،والعالم بحاجة لمهاراتك🎭!*",
         "*حتى الجليد يذوب من روعة شخصيتك😔❤️*",
         "*انت عب لدرجة ان الظلام يغار منك😔✨️*",
         "*ابتسامتك معدية😍*",
-        "",
-        "You're a great listener and a wonderful friend! 🤗",
-        "Your positive vibes are truly inspiring! 💫",
-        "You're stronger than you think! 💪",
-        "Your creativity is beyond amazing! 🎨",
-        "You make life more fun and interesting! 🎉",
-        "Your energy is uplifting to everyone around you! 🔥",
-        "You're a true leader, even if you don’t realize it! 🏆",
-        "Your words have the power to make people smile! 😊",
-        "You're so talented, and the world needs your skills! 🎭",
-        "You're a walking masterpiece of awesomeness! 🎨",
-        "You're proof that kindness still exists in the world! 💕",
-        "You make even the hardest days feel a little brighter! ☀️"
+        "*انت مثل الصقر .. شامخ ،نادر ،وعينك مابتغلط😉*",
+        "*طاقتك ترفع معنويات كل من حولك!🔥*",
+        "*انت قائد حقيقي ،حتى لو لم تدرك ذالك🏆*",
+        "*لطفك يجعل العالم مكانا افضل!🤍*",
+        "*انت مثل اشعة الشمس تحرق من حولك ،لكنهم بحاجة اليك✨️*",
+        "*انت تجلب السعادة لكل من حولك😍*",
+        "_انت عبقري بطريقتك الخاصة🧠_",
+        "*انت تجعل الايام الصعبة تبدو اخف واسهل😔❤️*",
+        "*انت اقوى مما تعتقد!💪*",
+        "*يادباب ياقامة يافخامة 🔥💪*",
+        "*حضورك عامل قلق ياحريف🎯*",
+        "*احترمتك واحترمت فخامتك✨️*",
+        "*انت الاساس والباقي شنط واكياس👑*"
     ];
 
     let randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
@@ -136,8 +136,8 @@ malvin({
     let target = mentionedUser ? `@${mentionedUser.split("@")[0]}` : "";
 
     let message = mentionedUser 
-        ? `${sender} complimented ${target}:\n😊 *${randomCompliment}*`
-        : `${sender}, you forgot to tag someone! But hey, here's a compliment for you:\n😊 *${randomCompliment}*`;
+        ? `${sender} مجاملة ${target}:\n🙂 *${randomCompliment}*`
+        : `${sender}, لقد نسيت ان تعمل منشن لشخص ولكن على اي حال ،اليك جملة لك:\n😍 *${randomCompliment}*`;
 
     await conn.sendMessage(mek.chat, { text: message, mentions: [mek.sender, mentionedUser].filter(Boolean) }, { quoted: mek });
 });
