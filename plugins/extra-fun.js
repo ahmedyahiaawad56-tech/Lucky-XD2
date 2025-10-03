@@ -136,8 +136,8 @@ malvin({
     let target = mentionedUser ? `@${mentionedUser.split("@")[0]}` : "";
 
     let message = mentionedUser 
-        ? `${sender} مجاملة ${target}:\n🙂 *${randomCompliment}*`
-        : `${sender}, لقد نسيت ان تعمل منشن لشخص ولكن على اي حال ،اليك جملة لك:\n😍 *${randomCompliment}*`;
+        ? ` ${target}:\n ${randomCompliment}`
+        : `${sender}, لقد نسيت ان تعمل منشن لشخص ولكن على اي حال ،اليك جملة لك:\n ${randomCompliment}`;
 
     await conn.sendMessage(mek.chat, { text: message, mentions: [mek.sender, mentionedUser].filter(Boolean) }, { quoted: mek });
 });
