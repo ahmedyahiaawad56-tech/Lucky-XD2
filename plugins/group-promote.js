@@ -1,7 +1,7 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "بوت تشغيل",
+    pattern: "تشغيل",
     alias: ["p", "makeadmin"],
     desc: "Promotes a member to group admin",
     category: "admin",
