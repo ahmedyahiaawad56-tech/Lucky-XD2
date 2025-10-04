@@ -1,11 +1,11 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "ترقيه",
+    pattern: "بوت تشغيل",
     alias: ["p", "makeadmin"],
     desc: "Promotes a member to group admin",
     category: "admin",
-    react: "⚙️",
+    react: "✅️",
     filename: __filename
 },
 async(conn, mek, m, {
@@ -15,10 +15,10 @@ async(conn, mek, m, {
     if (!isGroup) return reply("❌ This command can only be used in groups.");
 
     // Check if the user is an admin
-    if (!isAdmins) return reply("*لازم ادمن عشان يشتغل الامر*");
+    if (!isAdmins) return reply("_`تم التشغيل ،البوت جاهز للعمل`✅_");
 
     // Check if the bot is an admin
-    if (!isBotAdmins) return reply("*لازم ادمن عشان يتغل الامر*");
+    if (!isBotAdmins) return reply("_`تم التشغيل ،البوت جاهز للعمل`✅_");
 
     let number;
     if (m.quoted) {
