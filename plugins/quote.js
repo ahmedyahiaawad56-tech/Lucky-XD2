@@ -2,7 +2,7 @@ const axios = require("axios");
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "quote",
+  pattern: "اقتباس",
   alias: ["quotes", "motivate"],
   desc: "Get a random inspiring quote.",
   category: "fun",
@@ -14,17 +14,17 @@ malvin({
     const { content, author } = res.data;
 
     const formatted = `
-┌───「 💭 𝗜𝗡𝗦𝗣𝗜𝗥𝗔𝗧𝗜𝗢𝗡 」───
+┌───「 💭 اقتباس 」───
 │
 │  📜 *"${content}"*
-│  — ${author || "Unknown"}
+│  — ${author || "مجهول"}
 │
-└─🧠 Powered By *Lucky Tech Hub*
+└─🧠 Powered By *𝐦𝐚𝐥𝐯𝐢𝐧 Hub*
     `.trim();
 
     reply(formatted);
   } catch (e) {
-    console.error("❌ Quote Fetch Error:", e.message);
-    reply("⚠️ Failed to get a quote. Please try again later.");
+    console.error("حدث خطأ❌️:", e.message);
+    reply("حدث خطأ اثناء جلب الاقتباس❌️.حاول مرة اخرى⚠️");
   }
 });
