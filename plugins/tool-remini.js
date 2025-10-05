@@ -6,7 +6,7 @@ const path = require("path");
 const { malvin } = require("../malvin");
 
 malvin({
-  pattern: "جودة",
+  pattern: "تحسين",
   alias: ["enhance", "hq", "qualityup"],
   react: '✨',
   desc: "Enhance photo quality using Remini AI",
@@ -31,7 +31,7 @@ malvin({
     if (mimeType.includes('image/jpeg')) extension = '.jpg';
     else if (mimeType.includes('image/png')) extension = '.png';
     else {
-      return reply("🚫صيغة الصورة غير مدعومة ");
+      return reply("Unsupported image format. Please use JPEG or PNG");
     }
 
     // Create temp file
@@ -71,10 +71,10 @@ malvin({
     fs.writeFileSync(outputPath, response.data);
 
     // Send the enhanced image with loading message
-    await reply("🔄 تحسين دقة الصورة");
+    await reply("🔄 Enhancing image quality...");
     await client.sendMessage(message.chat, {
       image: fs.readFileSync(outputPath),
-      caption: "✅️تم تحسين الصورة بنجاح",
+      caption: "✅ Image enhanced successfully!",
     }, { quoted: message });
 
     // Clean up
@@ -82,6 +82,6 @@ malvin({
 
   } catch (error) {
     console.error('Remini Error:', error);
-    await reply(`❌ Error: ${error.message || "🚫فشل تحسين الصورة واجهة البرمجة غير متاحة"}`);
+    await reply(`❌ Error: ${error.message || "Failed to enhance image. The image might be too large or the API is unavailable."}`);
   }
 });
