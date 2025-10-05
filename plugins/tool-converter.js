@@ -35,14 +35,14 @@ malvin({
         // Send result
         await client.sendMessage(from, {
             image: imageBuffer,
-            caption: "> Powered By Lucky Tech Hub ",
+            caption: "> Powered By 𝐦𝐚𝐥𝐯𝐢𝐧 Tech Hub ",
             mimetype: 'image/png'
         }, { quoted: message });
 
     } catch (error) {
         console.error('Conversion error:', error);
         await client.sendMessage(from, {
-            text: "❌ Please try with a different sticker."
+            text: "*حاول مرة اخرى على ملصق اخر❌️*"
         }, { quoted: message });
     }
 });
