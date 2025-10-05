@@ -22,17 +22,17 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
 ➌ *انتصاب🌭*
 ➍ *نودز🍜*
 ➎ *سكس🫦*
-➏ *لطيف🩷*
+➏ *نيك🤤*
 ➏ *متعة🌊*
 ➐ *شرجي🕳️*
 ➒ *طيز🍑*
 ➓ *مص👄*
 
 ────────────────
-*_Simply type the number corresponding to the option you'd like to choose._*
+*_اكتب الرقم المقابل للخيار الذي ترغب في اختياره ._*
 ────────────────
-⚠️\`[NOTICE]\` 
-*By Continueing You Agree that you are 18+ .*`;
+⚠️\`[تحذير]\` 
+* كثرة استخدام هذا الامر قد يعرض حسابك للحظر.يرجى استخدامه بحذر🚫 *`;
 
         // URL image for NSFW
         const imageUrl = 'https://files.catbox.moe/4itzeu.jpg';
@@ -171,7 +171,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
                 caption: 'Here is your nude NSFW image 🔞🔥.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋🔥🔞.'
             }, { quoted: mek });
         } else {
-            reply('*محتوى حساس لايمكن العرض❌️*');
+            reply('> ╭──〔 ⚠️ محتوى محمي 〕──╮\n│ 🚫 لا يمكن عرض هذا المحتوى\n│ 🔐 يتطلب موافقة المطوّر قبل العرض\n╰──────────────────────╯');
         }
     } catch (e) {
         console.error(e);
@@ -205,7 +205,7 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
                 caption: 'Here is your sex NSFW image 🔞🔥.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋🔥🔞.'
             }, { quoted: mek });
         } else {
-            reply('*خطأ❌️ لايمكن العرض*');
+            reply('> ╭──〔 ⚠️ محتوى محمي 〕──╮\n│ 🚫 لا يمكن عرض هذا المحتوى\n│ 🔐 يتطلب موافقة المطوّر قبل العرض\n╰──────────────────────╯');
         }
     } catch (e) {
         console.error(e);
@@ -213,11 +213,11 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
     }
 });
 malvin({
-    pattern: "لطيف", // Nom de la commande
+    pattern: "نيك", // Nom de la commande
     desc: "Display a NSFW cute image",
     category: "fun",
     use: '.cute',
-    react: "🌸", // Réaction ajoutée
+    react: "🤤", // Réaction ajoutée
     filename: __filename
 },
 async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -239,11 +239,11 @@ async (conn, mek, m, { from, l, quoted, body, isCmd, command, args, q, isGroup, 
                 caption: 'Here is your cute NSFW image 🔞💖.\n> © 𝐦𝐚𝐥𝐯𝐢𝐧😋💖🔞.'
             }, { quoted: mek });
         } else {
-            reply('❌ Unable to fetch image. Please try again later.');
+            reply('> ╭──〔 ⚠️ محتوى محمي 〕──╮\n│ 🚫 لا يمكن عرض هذا المحتوى\n│ 🔐 يتطلب موافقة المطوّر قبل العرض\n╰──────────────────────╯');
         }
     } catch (e) {
         console.error(e);
-        await reply('❌ An error occurred while processing your request.');
+        await reply('> ╭──〔 ⚠️ محتوى محمي 〕──╮\n│ 🚫 لا يمكن عرض هذا المحتوى\n│ 🔐 يتطلب موافقة المطوّر قبل العرض\n╰──────────────────────╯');
     }
 });
 malvin({
