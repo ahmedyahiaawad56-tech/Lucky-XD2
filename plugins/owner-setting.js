@@ -16,7 +16,7 @@ async (conn, mek, m, { from, isOwner, reply }) => {
 });
 // 2. Broadcast Message to All Groups
 malvin({
-    pattern: "broadcast",
+    pattern: "نشر",
     desc: "Broadcast a message to all groups.",
     category: "owner",
     react: "📢",
@@ -24,13 +24,13 @@ malvin({
 },
 async (conn, mek, m, { from, isOwner, args, reply }) => {
     if (!isOwner) return reply("❌ You are not the owner!");
-    if (args.length === 0) return reply("📢 Please provide a message to broadcast.");
+    if (args.length === 0) return reply("*📢اكتب الرسالة ليتم نشرها!*");
     const message = args.join(' ');
     const groups = Object.keys(await conn.groupFetchAllParticipating());
     for (const groupId of groups) {
         await conn.sendMessage(groupId, { text: message }, { quoted: mek });
     }
-    reply("📢 Message broadcasted to all groups.");
+    reply("*تم ارسال الرسالة الى جميع القروبات 📢*");
 });
 // 3. Set Profile Picture
 malvin({
