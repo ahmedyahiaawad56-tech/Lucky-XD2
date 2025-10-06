@@ -3,7 +3,7 @@ const { malvin } = require('../malvin');
 const yts = require('yt-search');
 
 malvin({
-    pattern: "yt2",
+    pattern: "اغنيه",
     alias: ["play2", "music"],
     react: "🎵",
     desc: "Download audio from YouTube",
