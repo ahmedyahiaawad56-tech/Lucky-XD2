@@ -19,7 +19,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
         }
 
         // Inform user that we're checking
-        await reply("*🔄 جاري البحث عن بوتات متصلة .يستغرق الامر بعض الوقت.*");
+        await reply("*🔄 جاري البحث اشخاص متصلين .يستغرق الامر بعض الوقت.*");
 
         const onlineMembers = new Set();
         const groupData = await conn.groupMetadata(from);
@@ -64,7 +64,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
                 conn.ev.off('presence.update', presenceHandler);
                 
                 if (onlineMembers.size === 0) {
-                    return reply("*لم يتم اكتشاف بوت متصل ❌️*");
+                    return reply("*لم يتم اكتشاف اشخاص متصلين ❌️*");
                 }
                 
                 const onlineArray = Array.from(onlineMembers);
@@ -72,7 +72,7 @@ async (conn, mek, m, { from, quoted, isGroup, isAdmins, isCreator, fromMe, reply
                     `${index + 1}. @${member.split('@')[0]}`
                 ).join('\n');
                 
-                const message = `> :البوتات المتصلة🚦 (${onlineArray.length}/${groupData.participants.length}):\n\n${onlineList}`;
+                const message = `> :الأشخاص المتصلين🚦 (${onlineArray.length}/${groupData.participants.length}):\n\n${onlineList}`;
                 
                 await conn.sendMessage(from, { 
                     text: message,
