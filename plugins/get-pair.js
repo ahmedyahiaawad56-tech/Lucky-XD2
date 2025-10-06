@@ -2,7 +2,7 @@ const { malvin, commands } = require('../malvin');
 const axios = require('axios');
 
 malvin({
-    pattern: "pair",
+    pattern: "ربط",
     alias: ["getpair", "clonebot"],
     react: "✅",
     desc: "Get pairing code for LUCKY-XD bot",
@@ -16,18 +16,18 @@ malvin({
 
         // Validate phone number format
         if (!phoneNumber || phoneNumber.length < 10 || phoneNumber.length > 15) {
-            return await reply("❌ Please provide a valid phone number without `+`\nExample: `.pair 256789966xxx`");
+            return await reply("*⚠️يرجى ادخال الرقم ليتم الربط/ مثال :ربط 249×××*");
         }
 
         // Make API request to get pairing code
         const response = await axios.get(`https://new-session-1-d2kb.onrender.com/code?number=${encodeURIComponent(phoneNumber)}`);
 
         if (!response.data || !response.data.code) {
-            return await reply("❌ Failed to retrieve pairing code. Please try again later.");
+            return await reply("*❌️فشل الربط .حاول مرة اخرى*");
         }
 
         const pairingCode = response.data.code;
-        const doneMessage = "> *LUCKY-XD PAIRING COMPLETED*";
+        const doneMessage = "> تم اكمال الاقتران";
 
         // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
@@ -40,6 +40,6 @@ malvin({
 
     } catch (error) {
         console.error("Pair command error:", error);
-        await reply("❌ An error occurred while getting pairing code. Please try again later.");
+        await reply("*❌️فشل في الحصول على كود الربط .حاول مرة اخرى لاحقا*");
     }
 });
