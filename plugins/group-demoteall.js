@@ -1,20 +1,18 @@
 const { malvin } = require('../malvin');
 
 malvin({
-    pattern: "تنصيب",
+    pattern: "bulkdemote",
     alias: ["massdemote"],
     desc: "Demotes all admins to members (excluding bot & owners)",
     category: "admin",
-    react: "⚙️",
+    react: "🔻",
     filename: __filename
 }, async (conn, mek, m, {
     from, groupMetadata, groupAdmins, isBotAdmins, isAdmins, isGroup, reply, botNumber2
 }) => {
     if (!isGroup) return reply("❌ This command is only for groups.");
-    if (!isAdmins) return reply("⚙️نظام التنصيب\n\n*اختر الاجراء الذي تريد:*\n*فتح التنصيب🔓*\n*قفل التنصيب🔒*");
-");
-    if (!isBotAdmins) return reply("⚙️نظام التنصيب\n\n*اختر الاجراء الذي تريد:*\n*فتح التنصيب🔓*\n*قفل التنصيب🔒*");
-");
+    if (!isAdmins) return reply("❌ Only group admins can use this.");
+    if (!isBotAdmins) return reply("❌ I must be admin to do that.");
 
     const members = groupMetadata.participants;
     const owners = ['256789101112', '256756637300', '256789966218']; // edit your owner numbers
