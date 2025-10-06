@@ -4,17 +4,17 @@ const axios = require("axios");
 const { malvin } = require("../malvin");
 
 malvin({
-    pattern: "تنصيب",
+    pattern: "ميتا",
     alias: "luck",
     desc: "Interact with ChatGPT using the XD Api.",
     category: "ai",
-    react: "⚙️",
+    react: "🤖",
     use: ".lucky <your query>",
     filename: __filename,
 }, async (conn, mek, m, { from, args, q, reply }) => {
     try {
         // Vérification de l'entrée utilisateur
-        if (!q) return reply("> :⚙️نظام التنصيب\n\n*اختر الاجراء الذي تريد:*\n*فتح التنصيب🔓*\n*قفل التنصيب🔒*");
+        if (!q) return reply("_مرحبا👋،كيف يمكنني مساعدتك🤖؟_");
 
         // Utilisation de `${text}` dans le endpoint API
         const text = q;  // Texte de la requête de l'utilisateur
