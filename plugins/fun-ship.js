@@ -5,10 +5,10 @@ const { malvin, commands } = require("../malvin");
 const config = require("../settings");
 
 malvin({
-  pattern: "علاقة",
+  pattern: "زواج",
   alias: ["match", "love"],
   desc: "Randomly pairs the command user with another group member.",
-  react: "❤️",
+  react: "💞",
   category: "fun",
   filename: __filename
 }, async (conn, m, store, { from, isGroup, groupMetadata, reply, sender }) => {
@@ -29,7 +29,7 @@ malvin({
       } while (randomPair === sender);
     }
 
-    const message = `💘 *تم العثور على علاقة* 💘\n❤️ @${sender.split("@")[0]} + @${randomPair.split("@")[0]}\n💖 مبروك 🎉`;
+    const message = `💘 *تم عقد زواج رسمي بين* 💘\n🤵‍♂️الزوج @${sender.split("@")[0]} +👰‍♀️الزوجة @${randomPair.split("@")[0]}\n 💍 *ألف مبروك للعروسين الجميلين!* 💐\n\n*اليوم نحتفل بواحدة من أجمل اللحظات في الحياة* — *لحظة يجتمع فيها قلبان على المودة والرحمة  وتبدأ قصة جديدة من الحب والوفاء 💞*\n\n*نسأل الله أن يجعل زواجكم بداية لكل خير 🌹، وأن يرزقكم السعادة والراحة والسكينة في كل خطوة 🌸*\n\n*عسى أيامكم القادمة تكون مليانة بالحب 💘، والضحك ، والفرح ، والذكريات الحلوة *\n\n*مبارك الزواج 💫 وجعله الله زواجًا مباركًا سعيدًا يدوم للأبد 🤍✨*`;
 
     await conn.sendMessage(from, {
       text: message,
@@ -38,8 +38,8 @@ malvin({
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-          newsletterJid: "120363420656466131@newsletter",
-          newsletterName: "LUCKY-XD",
+          newsletterJid: "120363405271120802@g.us",
+          newsletterName: "𝐦𝐚𝐥𝐯𝐢𝐧",
           serverMessageId: 143
         }
       }
