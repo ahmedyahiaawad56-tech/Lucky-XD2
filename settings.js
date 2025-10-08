@@ -19,13 +19,13 @@ module.exports = {
   PREFIX: getConfig("PREFIX") || "ً" || settings.PREFIX,
   CHATBOT: getConfig("CHATBOT") || "on",
   BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "ʟᴜᴄᴋʏ-xᴅ",
-  MODE: getConfig("MODE") || process.env.MODE || "private",
+  MODE: getConfig("MODE") || process.env.MODE || "public",
   REPO: process.env.REPO || "https://github.com/Tomilucky218/Lucky-XD2",
   BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
   // ===== OWNER & DEVELOPER SETTINGS =====
   OWNER_NUMBER: settings.OWNER_NUMBER || process.env.OWNER_NUMBER || "201013346322",
-  OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "ʟᴜᴄᴋʏ ➋➊➑",
+  OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "𝐦𝐚𝐥𝐯𝐢𝐧",
   DEV: process.env.DEV || "201013346322",
   DEVELOPER_NUMBER: '201013346322@s.whatsapp.net',
   MENU_AUDIO_URL: process.env.MENU_AUDIO_URL || 'https://files.catbox.moe/3v5i11.mp3',
@@ -76,7 +76,7 @@ NEWSLETTER_JID: process.env.NEWSLETTER_JID || '120363405271120802@g.us',
   GOODBYE: process.env.GOODBYE || "false",
   ADMIN_ACTION: process.env.ADMIN_ACTION || "false",
   version: process.env.version || "1.5.0",
-  TIMEZONE: settings.TIMEZONE || process.env.TIMEZONE || "Africa/Kampala",
+  TIMEZONE: settings.TIMEZONE || process.env.TIMEZONE || "Africa/sudan",
 
   // ===== CATEGORY-SPECIFIC IMAGE URLs =====
   MENU_IMAGES: {
