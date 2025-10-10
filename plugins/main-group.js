@@ -10,15 +10,15 @@ const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, 
 // ==========================
 const sendCustomMessage = async (conn, from, message, mek, m) => {
     await conn.sendMessage(from, {
-        image: { url: `https://files.catbox.moe/4itzeu.jpg` },
+        image: { url: `https://i.postimg.cc/wTqKJ3Bw/1000324197.jpg` },
         caption: message,
         contextInfo: {
             mentionedJid: [m.sender],
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363420656466131@newsletter',
-                newsletterName: '🤖 ʟᴜᴄᴋʏ-xᴅ ',
+                newsletterJid: '120363405271120802@g.us',
+                newsletterName: '🤖 𝐦𝐚𝐥𝐯𝐢𝐧 ',
                 serverMessageId: 143
             }
         }
@@ -47,7 +47,7 @@ malvin({
 }) => {
   try {
     if (!isGroup) return reply("⚠️ This command only works in *groups*.");
-    if (!isBotAdmins) return reply("❌ لازم ادمن عشان تقدر توزع");
+    if (!isBotAdmins) return reply("*يتطلب هذا الامر ادمن ❌️*");
     if (!isAdmins && !isCreator) return reply("🔐 Only *group admins* or *owner* can use this command.");
 
     // Consistent user extraction logic
@@ -82,7 +82,7 @@ await sendCustomMessage(conn, from, `*✅ Successfully removed from group.*`, me
 
 // ==================== PROMOTE COMMAND ====================
 malvin({
-  pattern: "promote",
+  pattern: "ترقية",
   alias: ["p", "giveadmin", "makeadmin"],
   desc: "Promote a user to admin",
   category: "group",
@@ -135,7 +135,7 @@ await sendCustomMessage(conn, from, `*✅ Successfully Promoted to Admin.*`, mek
 
 // ==================== DEMOTE COMMAND ====================
 malvin({
-  pattern: "demote",
+  pattern: "انزال",
   alias: ["d", "dismiss", "removeadmin"],
   desc: "Demote a group admin",
   category: "group",
@@ -190,7 +190,7 @@ await sendCustomMessage(conn, from, `*✅ Admin Successfully demoted to a normal
 // Leave Group Command
 // ==========================
 malvin({
-    pattern: "leave",
+    pattern: "مغادرة",
     alias: ["left", "leftgc", "leavegc","exit"],
     desc: "Leave the group",
     react: "👋",
@@ -206,10 +206,10 @@ async (conn, mek, m, { from, isGroup, senderNumber }) => {
         if (senderNumber !== botOwner) {
             return await sendCustomMessage(conn, from, "Only the bot owner can use this command.", mek, m);
         }
-        await sendCustomMessage(conn, from, "Leaving group...", mek, m);
+        await sendCustomMessage(conn, from, "مغادرة المجموعة ...", mek, m);
         await sleep(1500);
         await conn.groupLeave(from);
-        await sendCustomMessage(conn, from, "Goodbye! 👋", mek, m);
+        await sendCustomMessage(conn, from, "وداعا👋", mek, m);
     } catch (e) {
         console.error(e);
         await sendCustomMessage(conn, from, `❌ Error: ${e}`, mek, m);
@@ -221,7 +221,7 @@ async (conn, mek, m, { from, isGroup, senderNumber }) => {
 // Add Member Command
 // ==========================
 malvin({
-    pattern: "add",
+    pattern: "اضافة",
     alias: ["a", "invite"],
     desc: "Adds a member to the group",
     category: "admin",
