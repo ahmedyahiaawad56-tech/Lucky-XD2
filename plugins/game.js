@@ -1,50 +1,45 @@
-
-
-const { delay } = require("@whiskeysockets/baileys");
-const { malvin } = require("../malvin");
-
-malvin({
-  pattern: "squidgame",
-  desc: "_Launching Squid Game in a Group_",
-  category: "fun",
+({
+  pattern: "لعبةالحبار",
+  desc: "_تشغيل لعبة الحبار داخل القروب_",
+  category: "تسلية",
   filename: __filename
 }, async (conn, mek, m, { isAdmin, isOwner, participants, reply }) => {
   try {
-    if (!m.isGroup) return reply("❌ This command can only be used in groups..");
-    if (!isAdmin && !isOwner) return reply("❌ Only admins can use this command..");
+    if (!m.isGroup) return reply("❌ هذا الأمر يعمل فقط داخل القروبات.");
+    if (!isAdmin && !isOwner) return reply("❌ هذا الأمر مخصص فقط للمشرفين.");
 
-    let groupMembers = participants.filter(p => !p.admin); // Exclure les admins
-    if (groupMembers.length < 5) return reply("⚠️ At least 5 non-admin members are required to play..");
+    let groupMembers = participants.filter(p => !p.admin); // استبعاد الأدمنز
+    if (groupMembers.length < 5) return reply("⚠️ يجب أن يكون هناك على الأقل 5 أعضاء غير مشرفين لبدء اللعبة.");
 
     let gameCreator = "@" + m.sender.split("@")[0];
 
-    // Message d'annonce du jeu
-    let gameMessage = `🔴 *Squid Game: Red Light,🟢Green Light*\n\n🎭 *Front Man*: (${gameCreator})\n`;
+    // رسالة إعلان اللعبة
+    let gameMessage = `🔴 *لعبة الحبار: الضوء الأحمر 🟥، الضوء الأخضر 🟩*\n\n🎭 *المدير:* (${gameCreator})\n`;
     gameMessage += groupMembers.map(m => "@" + m.id.split("@")[0]).join("\n") + "\n\n";
-    gameMessage += "All other group members have been added as players! The game will start in 50 seconds..";
+    gameMessage += "تم إضافة جميع أعضاء القروب كلّاعبين! تبدأ اللعبة خلال 50 ثانية...";
 
     await conn.sendMessage(m.chat, { text: gameMessage, mentions: groupMembers.map(m => m.id) });
 
-    await delay(50000); // Attente de 50s avant de sélectionner les joueurs
+    await delay(50000); // انتظار 50 ثانية قبل بدء اللعبة
 
-    // Sélectionner 50 joueurs aléatoires
+    // اختيار 5 لاعبين عشوائيين
     let players = groupMembers.sort(() => 0.5 - Math.random()).slice(0, 5);
 
     let playersList = players.map((p, i) => `${i + 1}. @${p.id.split("@")[0]}`).join("\n");
 
     await conn.sendMessage(m.chat, {
-      text: `🎮 *List of Players:*\n${playersList}\n\n🔔 The game is now starting... !`,
+      text: `🎮 *قائمة اللاعبين:*\n${playersList}\n\n🔔 اللعبة تبدأ الآن!`,
       mentions: players.map(p => p.id)
     });
 
     await delay(3000);
 
-    // Explication des règles
-    let rulesMessage = `📜 *Rules of Squid Game:*\n\n`
-      + `1️⃣ Pendant 🟥 *Red Light*, Players who send a message will be *eliminated* and *kicked* from the group.\n\n`
-      + `2️⃣ Pendant 🟩 *Green Light*, Players must send a message. Those who remain silent will be eliminated.\n\n`
-      + `3️⃣ Game ends when only one player remains.\n\n`
-      + `🏆 Survive to become the _winner_ !`;
+    // شرح القواعد
+    let rulesMessage = `📜 *قواعد اللعبة:*\n\n`
+      + `1️⃣ أثناء 🟥 *الضوء الأحمر*، من يرسل رسالة سيتم *استبعاده وطرده* من القروب.\n\n`
+      + `2️⃣ أثناء 🟩 *الضوء الأخضر*، يجب على اللاعبين إرسال رسالة، ومن يسكت سيتم استبعاده.\n\n`
+      + `3️⃣ تنتهي اللعبة عندما يبقى لاعب واحد فقط.\n\n`
+      + `🏆 حاول النجاة لتصبح _الفائز!_`;
 
     await conn.sendMessage(m.chat, { text: rulesMessage });
 
@@ -53,13 +48,13 @@ malvin({
     let remainingPlayers = [...players];
     while (remainingPlayers.length > 1) {
       let isGreenLight = Math.random() > 0.5;
-      let lightMessage = isGreenLight ? "🟩 *Green Light*" : "🟥 *Red Light*";
+      let lightMessage = isGreenLight ? "🟩 *الضوء الأخضر*" : "🟥 *الضوء الأحمر*";
       await conn.sendMessage(m.chat, { text: `🔔 ${lightMessage}` });
 
-      await delay(5000); // Délai de 5s entre chaque phase
+      await delay(5000); // انتظار 5 ثواني بين كل مرحلة
 
       let playersToKick = [];
-      let spokenPlayers = new Set(); // Stocke ceux qui ont parlé
+      let spokenPlayers = new Set(); // من تحدثوا أثناء الجولة
 
       conn.ev.on("messages.upsert", (msg) => {
         let sender = msg.messages[0].key.remoteJid;
@@ -67,14 +62,14 @@ malvin({
       });
 
       if (isGreenLight) {
-        // Vérifier qui ne parle pas
+        // من لم يتكلم أثناء الضوء الأخضر يُستبعد
         for (let player of remainingPlayers) {
           if (!spokenPlayers.has(player.id)) {
             playersToKick.push(player);
           }
         }
       } else {
-        // Vérifier qui parle
+        // من يتكلم أثناء الضوء الأحمر يُستبعد
         for (let player of remainingPlayers) {
           if (spokenPlayers.has(player.id)) {
             playersToKick.push(player);
@@ -85,8 +80,8 @@ malvin({
       for (let player of playersToKick) {
         await conn.groupParticipantsUpdate(m.chat, [player.id], "remove");
         let eliminationMessage = isGreenLight
-          ? `❌ @${player.id.split("@")[0]} remained silent during 🟩 _Green Light_ and has been eliminated and kicked from the group.`
-          : `❌ @${player.id.split("@")[0]} wrote during 🟥 _Red Light_ and has been eliminated and kicked from the group.`;
+          ? `❌ @${player.id.split("@")[0]} سكت أثناء 🟩 *الضوء الأخضر* وتم استبعاده من القروب.`
+          : `❌ @${player.id.split("@")[0]} تكلم أثناء 🟥 *الضوء الأحمر* وتم استبعاده من القروب.`;
 
         await conn.sendMessage(m.chat, {
           text: eliminationMessage,
@@ -99,16 +94,15 @@ malvin({
 
     if (remainingPlayers.length === 1) {
       await conn.sendMessage(m.chat, {
-        text: `🏆 *Congrstulations @${remainingPlayers[0].id.split("@")[0]} !*\n_I Survived the Squid Game!_ ! 🎉`,
+        text: `🏆 *مبروك @${remainingPlayers[0].id.split("@")[0]}!* 🎉\nلقد نجوت من لعبة الحبار! 🦑`,
         mentions: [remainingPlayers[0].id]
       });
     }
   } catch (error) {
-    console.error("Erreur dans la commande .squidgame:", error);
-    reply("❌ Une erreur s'est produite lors du lancement du Squid Game.");
+    console.error("خطأ في أمر لعبة الحبار:", error);
+    reply("❌ حدث خطأ أثناء تشغيل لعبة الحبار.");
   }
 });
-
 malvin({
     pattern: "konami",
     desc: "Simulate a match between two teams and choose a winner randomly after 30 seconds.",
