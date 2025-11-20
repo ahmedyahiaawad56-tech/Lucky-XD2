@@ -29,8 +29,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Create session folder
-      run: mkdir -p session
+    - name: Create sessions folder
+      run: mkdir -p sessions
 
     - name: Start application
       run: npm start
